@@ -1,6 +1,3 @@
-# Bootstrap
-app/bootstrap*
-
 # Symfony directories
 vendor/*
 */logs/*
@@ -9,5 +6,7 @@ web/uploads/*
 web/bundles/*
 
 # Configuration files
-app/config/parameters.ini
-app/config/parameters.yml
+/examples/
+/server/log/
+/server/config/config.php
+/server/data/rebuild_db.php
