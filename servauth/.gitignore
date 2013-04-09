@@ -1,0 +1,7 @@
+.DS_Store
+/vendor/
+composer.lock
+composer.phar
+autoload.php
+data/oauth.sqlite
+data/parameters.json
