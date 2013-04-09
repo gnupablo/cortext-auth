@@ -27,10 +27,10 @@ Then, run composer to install the dependencies
 
 Silex requires you to [configure your web server](http://silex.sensiolabs.org/doc/web_servers.html) to run it.
 The fastest way is the standalone php server : 
-  $ cd server
-  $ php -S localhost:3000 -t web web/index.php
+    $ cd server
+    $ php -S localhost:3000 -t web web/index.php
 
-and you're done !
+> and you're done !
 
 **If you need to re-install the app from scratch, don't forget to delete the data/ sqlite database first !**
 
