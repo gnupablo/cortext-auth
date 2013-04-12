@@ -1,7 +1,7 @@
 cortext-auth
 ============
 
-Cortext Auth is a standalone User management app and [oAuth2](http://oauth.net/2/) server , based on Symfony Silex framework (see http://silex.sensiolabs.org/documentation), and php 5.4
+Cortext Auth is a standalone User management app and [oAuth2](http://oauth.net/2/) server , based on Symfony Silex framework (see http://silex.sensiolabs.org/documentation)
 
 Installation
 ------------
@@ -9,7 +9,7 @@ Installation
 **Dependencies**
 Before anything, be sure to have the following packages : 
 
-- php 5.4
+- php 5.4 (or 5.3.2 if you don't need the standalone web server)
 - php5-curl module
 - php5-sqlite for the default storage configuration, or any storage management package you need
 
