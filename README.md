@@ -27,6 +27,7 @@ Then, run composer to install the dependencies
 
 Silex requires you to [configure your web server](http://silex.sensiolabs.org/doc/web_servers.html) to run it.
 The fastest way is the standalone php server : 
+
     $ cd server
     $ php -S localhost:3000 -t web web/index.php
 
@@ -35,7 +36,9 @@ The fastest way is the standalone php server :
 **If you need to re-install the app from scratch, don't forget to delete the data/ sqlite database first !**
 
 The User management app
------------------
+-----------------------
+> (still in dev)
+
   * `/login`
   * `/register`
   * `/lostPassword`
@@ -52,4 +55,4 @@ The Lock'd In APIs implement the following OAuth2-compatible endpoints:
 These are the three main functions of an OAuth2 server, to authorize the user, grant the user tokens, and validate the token on
 request to the APIs.  When you write your OAuth2-compatible servers, you will use very similar methods
 
-> Note: the above urls are prefixed with `/lockdin` to namespace the application.
+> Note: the above urls are prefixed with `/auth` to namespace the application.
