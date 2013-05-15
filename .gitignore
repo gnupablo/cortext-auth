@@ -16,6 +16,5 @@ web/bundles/*
 /examples/
 /server/log/
 /server/config/config.php
-/server/data/rebuild_db.php
-/server/data/oauth.sqlite
-/server/data/parameters.json
+/server/data/*
+composer.*
