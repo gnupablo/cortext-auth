@@ -1,7 +1,7 @@
 cortext-auth
 ============
 
-Cortext Auth is a standalone User management app and [oAuth2](http://oauth.net/2/) server , based on Symfony Silex framework (see http://silex.sensiolabs.org/documentation), and php 5.4
+Cortext Auth is a standalone User management app and [oAuth2](http://oauth.net/2/) server , based on Symfony Silex framework (see http://silex.sensiolabs.org/documentation)
 
 Installation
 ------------
@@ -9,7 +9,7 @@ Installation
 **Dependencies**
 Before anything, be sure to have the following packages : 
 
-- php 5.4
+- php 5.4 (or 5.3.2 if you don't need the standalone web server)
 - php5-curl module
 - php5-sqlite for the default storage configuration, or any storage management package you need
 
@@ -27,6 +27,7 @@ Then, run composer to install the dependencies
 
 Silex requires you to [configure your web server](http://silex.sensiolabs.org/doc/web_servers.html) to run it.
 The fastest way is the standalone php server : 
+
     $ cd server
     $ php -S localhost:3000 -t web web/index.php
 
@@ -35,7 +36,9 @@ The fastest way is the standalone php server :
 **If you need to re-install the app from scratch, don't forget to delete the data/ sqlite database first !**
 
 The User management app
------------------
+-----------------------
+> (still in dev)
+
   * `/login`
   * `/register`
   * `/lostPassword`
@@ -52,4 +55,4 @@ The Lock'd In APIs implement the following OAuth2-compatible endpoints:
 These are the three main functions of an OAuth2 server, to authorize the user, grant the user tokens, and validate the token on
 request to the APIs.  When you write your OAuth2-compatible servers, you will use very similar methods
 
-> Note: the above urls are prefixed with `/lockdin` to namespace the application.
+> Note: the above urls are prefixed with `/auth` to namespace the application.
