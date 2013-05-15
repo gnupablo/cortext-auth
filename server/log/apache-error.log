@@ -313,3 +313,7 @@
 [Tue Apr 09 16:36:14 2013] [error] [client 127.0.0.1] PHP   7. Ctauth\\ControllerProvider->Ctauth\\{closure}() /home/philippe/dev/gitcortext/cortext-auth/server/vendor/symfony/http-kernel/Symfony/Component/HttpKernel/HttpKernel.php:129, referer: http://oauth.dev/
 [Tue Apr 09 16:36:14 2013] [error] [client 127.0.0.1] PHP   8. OAuth2\\HttpFoundationBridge\\Server->getResponse() /home/philippe/dev/gitcortext/cortext-auth/server/src/Ctauth/ControllerProvider.php:20, referer: http://oauth.dev/
 [Tue Apr 09 16:36:14 2013] [error] [client 127.0.0.1] PHP   9. OAuth2\\HttpFoundationBridge\\Server->createResponse() /home/philippe/dev/gitcortext/cortext-auth/server/vendor/bshaffer/oauth2-server-httpfoundation-bridge/src/OAuth2/HttpFoundationBridge/Server.php:26, referer: http://oauth.dev/
+[Tue Apr 09 17:41:13 2013] [error] [client 127.0.0.1] File does not exist: /home/philippe/dev/gitcortext/cortext-auth/servauth
+[Tue Apr 09 17:41:13 2013] [error] [client 127.0.0.1] File does not exist: /home/philippe/dev/gitcortext/cortext-auth/servauth
+[Tue Apr 09 17:41:29 2013] [error] [client 127.0.0.1] File does not exist: /home/philippe/dev/gitcortext/cortext-auth/servauth
+[Tue Apr 09 17:41:29 2013] [error] [client 127.0.0.1] File does not exist: /home/philippe/dev/gitcortext/cortext-auth/servauth

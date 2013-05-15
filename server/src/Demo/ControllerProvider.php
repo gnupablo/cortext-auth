@@ -35,6 +35,7 @@ class ControllerProvider implements ControllerProviderInterface
                 'client_secret' => $app['parameters']['client_secret'],
                 'redirect_uri'  => $app['url_generator']->generate('authorize_redirect', array(), true),
             );
+            print_r($query);
 
             // call the API using curl
             $curl = new Curl();
@@ -42,6 +43,7 @@ class ControllerProvider implements ControllerProviderInterface
             $endpoint = 0 === strpos($grantRoute, 'http') ? $grantRoute : $app['url_generator']->generate($grantRoute, array(), true);
 
             $response = $curl->request($endpoint, $query, 'POST', $app['parameters']['curl_options']);
+            print_r($response);
             $json = json_decode($response['response'], true);
 
             // render error if applicable

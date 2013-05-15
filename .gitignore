@@ -4,9 +4,18 @@
 */cache/*
 web/uploads/*
 web/bundles/*
+.DS_Store
+/vendor/
+
+# Composer
+/server/composer.lock
+/server/composer.phar
+/server/autoload.php
 
 # Configuration files
 /examples/
 /server/log/
 /server/config/config.php
 /server/data/rebuild_db.php
+/server/data/oauth.sqlite
+/server/data/parameters.json
