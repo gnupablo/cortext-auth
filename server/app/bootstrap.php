@@ -27,12 +27,22 @@ $app['twig']->addExtension(new Ctprofile\Twig\JsonStringifyExtension());
 
 //////// Security providers /////////
 //////// see https://github.com/jasongrimes/silex-simpleuser ///
+
+/////params //todo get it from parameters.json
+$params = array(  
+   'dbname' => 'ct_oauth',
+    'host' => 'localhost',
+    'username' => 'root',
+    'password' => 'sfx4c02m',
+);     
+$params['dsn'] = 'mysql:host='.$params['host'].';dbname='.$params['dbname'];
+
 $app->register(new Provider\DoctrineServiceProvider(), array('db.options' => array(
         'driver' => 'pdo_mysql',
-        'dbname' => 'ct_oauth',
-        'host' => 'localhost',
-        'user' => 'root',
-        'password' => 'sfx4c02m',
+        'dbname' => $params['dbname'],
+        'host' => $params['host'],
+        'user' => $params['username'],
+        'password' => $params['password'],
         )));
 
 $app->register(new Provider\SecurityServiceProvider());
@@ -79,17 +89,13 @@ $app->register(new Provider\SessionServiceProvider());
 // SimpleUser service provider.
 $app->register($u = new SimpleUser\UserServiceProvider());
 
-
-
+ $db = new PDO( $params['dsn'], $params['username'],$params['password']);
+ $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+ $app['db_oauth'] = $db;
 /** set up dependency injection container */
 $app['oauth_storage'] = function ($app)
-        {
-            if (!file_exists($sqliteDir = __DIR__ . '/../data/oauth.sqlite'))
-            {
-                // generate sqlite if it does not exist
-                include_once(__DIR__ . '/../data/rebuild_db.php');
-            }
-            return new OAuth2_Storage_Pdo(array('dsn' => 'sqlite:' . $sqliteDir));
+        { 
+            return new OAuth2_Storage_Pdo($app['db_oauth']);
         };
 
 $app['oauth_server'] = function($app)
