@@ -1,4 +1,4 @@
-{% extends "demo/base.twig" %}
+{% extends "ctprofile/base.twig" %}
 
 {% block content %}
     <h3>Token Retrieved!</h3>
@@ -14,7 +14,7 @@
         </ul>
     {% else %}
         <h4>Response:</h4>
-        {% include 'demo/_error.twig' %}
+        {% include 'ctprofile/_error.twig' %}
     {% endif %}
     <a href="{{ path('homepage') }}">back</a>
     <div class="help"><em>The API call can be seen at <a href="{{ endpoint }}" target="_blank">{{endpoint}}</a></em></div>

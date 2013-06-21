@@ -1,6 +1,6 @@
 <?php
 
-namespace Demo\Twig;
+namespace Ctprofile\Twig;
 
 class JsonStringifyExtension extends \Twig_Extension
 {

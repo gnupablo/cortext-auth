@@ -1,6 +1,6 @@
 <?php
 
-namespace Demo;
+namespace Ctprofile;
 
 class Curl
 {
@@ -11,7 +11,7 @@ class Curl
         $this->options = array_merge(array(
             'debug'      => false,
             'http_port'  => '80',
-            'user_agent' => 'PHP-curl-client (https://github.com/bshaffer/oauth2-server-demo)',
+            'user_agent' => 'PHP-curl-client / Cortext oAuth server',
             'timeout'    => 20,
             'curlopts'   => null,
             'verifyssl'  => true,
@@ -140,7 +140,7 @@ class Curl
     {
         if($this->options['debug'])
         {
-            print $message."\n";
+            print '[curl-messaging] '.$message."\n";
         }
     }
 }

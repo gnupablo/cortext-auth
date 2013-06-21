@@ -1,6 +1,6 @@
 <?php
 
-namespace Demo;
+namespace Ctprofile;
 
 use Silex\Application;
 use Silex\ControllerProviderInterface;
@@ -9,8 +9,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ControllerProvider implements ControllerProviderInterface
 {
+    
     public function connect(Application $app)
     {
+        
+        
         // creates a new controller based on the default route
         $controllers = $app['controllers_factory'];
 
@@ -21,10 +24,11 @@ class ControllerProvider implements ControllerProviderInterface
 
         $controllers->get('/authorized', function(Application $app) {
             $server = $app['oauth_server'];
+            $app['monolog']->info("[ctprofile] GET /authorized");
 
             // the user denied the authorization request
             if (!$code = $app['request']->get('code')) {
-                return $app['twig']->render('demo/denied.twig');
+                return $app['twig']->render('ctprofile/denied.twig');
             }
 
             // exchange authorization code for access token
@@ -35,17 +39,18 @@ class ControllerProvider implements ControllerProviderInterface
                 'client_secret' => $app['parameters']['client_secret'],
                 'redirect_uri'  => $app['url_generator']->generate('authorize_redirect', array(), true),
             );
-            print_r($query);
+            $app['monolog']->info('sending auth code to server for access token : '.print_r($query, true));
 
             // call the API using curl
             $curl = new Curl();
             $grantRoute = $app['parameters']['token_route'];
             $endpoint = 0 === strpos($grantRoute, 'http') ? $grantRoute : $app['url_generator']->generate($grantRoute, array(), true);
-
+            
             $response = $curl->request($endpoint, $query, 'POST', $app['parameters']['curl_options']);
-            print_r($response);
+            //$response = $this->http_post($endpoint, $query);
+            $app['monolog']->info( $endpoint .' response : '.print_r($response, true));
             $json = json_decode($response['response'], true);
-
+            //die(print_r($response));
             // render error if applicable
             $error = array();
             if ($response['errorNumber']) {
@@ -64,13 +69,36 @@ class ControllerProvider implements ControllerProviderInterface
                 $apiRoute = $app['parameters']['resource_route'];
                 $endpoint = 0 === strpos($apiRoute, 'http') ? $apiRoute : $app['url_generator']->generate($apiRoute, array(), true);
                 $response = $curl->request($endpoint, $params, $app['parameters']['resource_method'], $app['parameters']['curl_options']);
-                $json = json_decode($response['response'], true);
-                return $app['twig']->render('demo/granted.twig', array('response' => $json ? $json : $response, 'token' => $token, 'endpoint' => $endpoint));
+                $json = json_decode($response['content'], true);
+                return $app['twig']->render('ctprofile/granted.twig', array('response' => $json ? $json : $response, 'token' => $token, 'endpoint' => $endpoint));
             }
 
-            return $app['twig']->render('demo/error.twig', array('response' => $error));
+            return $app['twig']->render('ctprofile/error.twig', array('response' => $error));
         })->bind('authorize_redirect');
 
         return $controllers;
+    }
+    
+    
+    /**
+     * make an http POST request and return the response content and headers
+     * @param string $url    url of the requested script
+     * @param array $data    hash array of request variables
+     * @return returns a hash array with response content and headers in the following form:
+     *  array ('content'=>'<html></html>'
+     *        , 'headers'=>array ('HTTP/1.1 200 OK', 'Connection: close', ...)
+     *       )
+     */
+    function http_post($url, $data)
+    {
+        $data_url = http_build_query($data);
+        $data_len = strlen($data_url);
+
+        return array('content' => file_get_contents($url, false, stream_context_create(array('http' => array('method' => 'POST'
+                            , 'header' => "Connection: close\r\nContent-Length: $data_len\r\n"
+                            , 'content' => $data_url
+                            ))))
+            , 'headers' => $http_response_header
+        );
     }
 }

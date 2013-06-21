@@ -1,0 +1,147 @@
+/*
+Document : login.css
+Created on : 27 mai 2011, 11:07:07
+Author : Philippe Breucker
+Description:
+css for the login page of cortext
+*/
+@import "reset.css";
+
+@font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
+
+body {background: #fff center 50px no-repeat; font-family: "Oxygen-Regular" }
+p{ font-family: "Oxygen-Regular"; color: #444}
+#container { width:1280px;margin : auto; text-align: center}
+header {height: 50px; width: 765px;margin: auto; margin-top: 70px; text-align: center; background: #fff !important}
+header img{margin-bottom:0px;}
+a{color: #A3A1A1;font: 12px arial;line-height: 36px;}
+a:hover {color: #666768;}
+h1 {font: normal 20px "Oxygen-Regular";color: #444;letter-spacing: 1.5px;margin:auto; margin-top: 0; margin-bottom: 112px;}
+
+/*forms*/
+
+#frm_signin span a{margin-left:43px;}
+
+#signin_username, #signin_password{border: 1px solid #DCDCDC;
+    color: #828080;
+    display: block;
+    font: 13px arial;
+    height: 34px;
+    margin-bottom: 20px;
+    padding: 0 5px;
+    position: relative;
+    width: 250px;
+    z-index: 2;}
+.main #frm_signin span {float: right;width: 205px;position: relative;top: -58px; right: 70px;color: #A3A1A1;font: 12px arial;line-height: 36px;text-align: left; text-transform: lowercase}
+
+.main #frm_signin .name, .main #frm_signin .password {float:left;margin-left:110px;margin-top:8px;}	
+	
+input,textarea {border: 1px solid gainsboro;color: #BCBBBB;font: 13px arial;width: 190px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-left: 182px;border-radius: 3px; display: table-cell}
+:focus{ color: #6E6E6E !important; border : solid 1px #666768;}
+textarea{height: auto}
+#content{background: #fff;margin :auto; width: 765px;}
+#content .main {}
+#login_wrapper{margin: auto;font : normal 14px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;}
+#login_wrapper input{display: block}
+#form_wrapper {margin-left: 75px}
+.main span {float: right;width: 205px;position: relative;top: -40px; right: 70px;color: #A3A1A1;font: 12px arial;line-height: 36px;text-align: left; text-transform: lowercase}
+#signin_remember{display:none}
+li.submit_row input, input[type=submit]{ background: #2F2F2F; border: 1px solid #090909; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); cursor: pointer; color : white; font:bold 14px arial; margin-bottom: 10px; text-transform: lowercase;}
+#btsubmit{background: none repeat scroll 0 0 #34B02C;
+    border: 1px solid #388530;
+    color: white;
+    height: 34px;
+    padding: 0 5px;
+    width: 260px;}
+#btsubmit:hover{border:solid 1px #388530; background: #229716;}
+/* Register forms */
+.sf_apply .error_list{display: inline-block}
+.sf_apply .error_list li{background: transparent !important;color: #800; font: 12px arial;line-height: 36px;text-align: left; text-transform: lowercase; position: relative; right: 0}
+div.sf_apply, div.sf_apply_notice{ margin: auto; padding-top: 20px; width: 765px; font : normal 14px "Oxygen-Regular", arial, serif; color : #4d4d4d;}
+div.sf_apply a, div.sf_apply_notice a { color: #4d4d4d }
+div.sf_apply h2{ font : bold 20px "Oxygen-Regular", arial, serif; color : #4d4d4d; margin-bottom: 10px; text-align: center}
+div.sf_apply h3{ font : bold 16px "Oxygen-Regular", arial, serif; color : #4d4d4d; margin-bottom: 10px; margin-top: 35px; text-align: center}
+div.sf_apply li {background: #fff; border: none;margin-bottom: -20px;}
+div.sf_apply li:hover {background: #fff; border: none}
+div.sf_apply label {height: 36px;width: 150px;margin-top: 22px;color: #666768;font: normal 14px arial; text-transform: lowercase;border : none; display: inline-block; text-align: right}
+div.sf_apply li.submit_row{ vertical-align: middle; line-height: 30px; border : none;margin-top : 30px; }
+div.sf_apply input{width: 250px; vertical-align: middle !important; display:inline-block; margin: 0; margin-top: -10px; }
+div.sf_apply textarea{width: 250px; vertical-align: middle !important; display:inline-block; margin : 0; height: 100px; margin-bottom: 15px; margin-top: 10px}
+div.sf_apply .submit_row input {
+	background:#235BBE;
+    border: 1px solid #19428F;
+    color: white;
+    height: 34px;
+    margin-bottom: 50px;
+    margin-top: -20px;
+    padding: 0 5px;
+    width: 260px;
+/*	width: 150px; padding: 5px; border: 1px solid #4d4d4d; background: #333; color: white;
+*/	
+	}
+div.sf_apply .submit_row input:hover {
+	background:#1f51a8;
+    border: 1px solid #153879;
+}	
+
+/*Reset password*/
+.sf_apply_reset_request {text-align: left}
+.sf_apply_reset_request p {margin-bottom: 15px;}
+.sf_apply_reset_request #recaptcha_widget_div{margin-left: 165px; margin-top: -10px; background: white;}
+#sfApplyResetRequest_username_or_email{width: 302px; /*to match recaptcha input size*/}
+#sf_apply_reset_form label {width: 200px;}
+
+/*footer*/
+#footer {margin-top : 300px; width:1280px; clear: both}
+#contact {text-align: center; font : normal 11px arial; color: #999;border-top : 1px solid #eee; width: 600px; margin :auto; text-align: center}
+#contact a { display: table-cell; padding-left: 5px}
+#contact li {margin: 0; height: 20px;}
+#contact li span{text-align: right; margin-right: 10px; display:table-cell;width: 300px;}
+
+
+/* ------pour validation formulaire dynamique-----------------------------------------------*/
+
+
+.blocks p {
+	position:relative;
+}
+
+.blocks label.error{
+	position:absolute;
+	z-index:1;
+	top:-11px;
+	left:-2px;
+	padding:5px 15px 9px 280px;
+	width:auto;
+	text-align:left;
+	line-height:26px;
+	margin:0;
+	background-color:#FFEEF0;
+	color:#666667;
+}
+
+.blocks label.ok {
+	position:absolute;
+	z-index:1;
+	top:-11px;
+	left:-1px;
+	padding:5px 15px 16px 229px;
+	margin:0;
+	color:#666667;
+	border: 1px solid #54cf4c;
+}
+
+.btn,
+.text,
+.textarea,
+.blocks label.error,
+.blocks label.ok { 
+	border-radius:2px;
+}
+
+
+
+/*** authorize specifics ***/
+#authorize-container{float:left; width: 765px; margin: auto;height: 200px;}
+#authorize-container div{float:left; width: 250px; padding: 20px; border: 1px solid #eee; min-height: 100%; margin-left: 50px}
+#no-idea{}

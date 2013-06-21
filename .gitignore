@@ -17,4 +17,4 @@ web/bundles/*
 /server/log/
 /server/config/config.php
 /server/data/*
-composer.*
+composer.lock

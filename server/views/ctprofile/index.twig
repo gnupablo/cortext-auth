@@ -1,0 +1,24 @@
+{% extends "ctprofile/base.twig" %}
+
+{% block content %}
+<div class="row" id="authorize-container">
+    <div id='authorize'>
+        <p>
+            I am here because I try to authenticate
+            to application xxxx
+        </p>
+        <p>
+            And I accept to share my private data inside cortext network to this application.
+        </p>
+        <a id="btsubmit" class="btn" href="{{ app.parameters.authorize_route|slice(0, 4) == 'http' ? app.parameters.authorize_route : url(app.parameters.authorize_route) }}?response_type=code&client_id={{app.parameters.client_id}}&redirect_uri={{ url('authorize_redirect')|url_encode() }}">Authorize</a>
+    </div>
+    <div id='no-idea' >
+        <p>
+            I have no idea what I am doing here and then certainly is here by mistake. Please do not give access to any of my information.
+        </p>
+        <a class="btn" href="http://www.cortext.net">Get out</a>
+    </div>
+</div>
+
+
+{% endblock %}
