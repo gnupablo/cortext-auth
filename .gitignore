@@ -15,6 +15,7 @@ web/bundles/*
 # Configuration files
 /examples/
 /server/log/
+/server/log/*
 /server/config/config.php
 /server/data/*
 composer.lock
