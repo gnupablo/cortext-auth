@@ -7,4 +7,11 @@
   "resource_method": "GET",
   "resource_params": {},
   "curl_options": {}
+  "db_options": {
+       "driver"    : "sqlite",
+       "dbname" : "ct_oauth",
+        "host" : "localhost",
+        "username" : "user",
+        "password" : "passwd",
+    }
 }

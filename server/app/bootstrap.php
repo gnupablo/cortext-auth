@@ -15,6 +15,12 @@ $app->register(new Provider\MonologServiceProvider(), array(
     'monolog.level' => Monolog\Logger::DEBUG,
 ));
 
+////// session
+$app->register(new Provider\SessionServiceProvider());
+
+///// parameters
+require_once  __DIR__ .'/config.php';
+//die(var_dump( $app['parameters']));
 
 //// url generator
 $app->register(new Provider\UrlGeneratorServiceProvider());
@@ -28,22 +34,7 @@ $app['twig']->addExtension(new Ctprofile\Twig\JsonStringifyExtension());
 //////// Security providers /////////
 //////// see https://github.com/jasongrimes/silex-simpleuser ///
 
-/////params //todo get it from parameters.json
-$params = array(  
-   'dbname' => 'ct_oauth',
-    'host' => 'localhost',
-    'username' => 'root',
-    'password' => 'sfx4c02m',
-);     
-$params['dsn'] = 'mysql:host='.$params['host'].';dbname='.$params['dbname'];
-
-$app->register(new Provider\DoctrineServiceProvider(), array('db.options' => array(
-        'driver' => 'pdo_mysql',
-        'dbname' => $params['dbname'],
-        'host' => $params['host'],
-        'user' => $params['username'],
-        'password' => $params['password'],
-        )));
+$app->register(new Provider\DoctrineServiceProvider(), array('db.options' => $app['parameters']['db_options']));
 
 $app->register(new Provider\SecurityServiceProvider());
 $app['security.firewalls'] = array(
@@ -79,9 +70,6 @@ $app['security.role_hierarchy'] =array(
 $app->register(new Provider\RememberMeServiceProvider());
 
 // These services are only required if you use the optional SimpleUser controller provider for form-based authentication.
-////// session
-$app->register(new Provider\SessionServiceProvider());
-
 
 
 
@@ -89,7 +77,7 @@ $app->register(new Provider\SessionServiceProvider());
 // SimpleUser service provider.
 $app->register($u = new SimpleUser\UserServiceProvider());
 
- $db = new PDO( $params['dsn'], $params['username'],$params['password']);
+ $db = new PDO( $app['parameters']['db_options']['dsn'],  $app['parameters']['db_options']['username'], $app['parameters']['db_options']['password']);
  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  $app['db_oauth'] = $db;
 /** set up dependency injection container */
@@ -106,28 +94,7 @@ $app['oauth_server'] = function($app)
             return $server;
         };
 
-/** load the parameters configuration */
-$parameterFile = __DIR__ . '/../data/parameters.json';
-if (!file_exists($parameterFile))
-{
-    // allows you to customize parameter file
-    $parameterFile = $parameterFile . '.dist';
-}
 
-$app['environments'] = array();
-if (!$parameters = json_decode(file_get_contents($parameterFile), true))
-{
-    exit('unable to parse parameters file: ' . $parameterFile);
-}
-// we are using an array of configurations
-if (!isset($parameters['client_id']))
-{
-    $app['environments'] = array_keys($parameters);
-    $env = $app['session']->get('config_environment');
-    $parameters = isset($parameters[$env]) ? $parameters[$env] : array_shift($parameters);
-}
-
-$app['parameters'] = $parameters;
 
 
 ////// mounting points
