@@ -69,7 +69,8 @@ class ControllerProvider implements ControllerProviderInterface
                 $apiRoute = $app['parameters']['resource_route'];
                 $endpoint = 0 === strpos($apiRoute, 'http') ? $apiRoute : $app['url_generator']->generate($apiRoute, array(), true);
                 $response = $curl->request($endpoint, $params, $app['parameters']['resource_method'], $app['parameters']['curl_options']);
-                $json = json_decode($response['content'], true);
+                //die(print_r($response['response']));
+                $json = json_decode($response['response'], true);
                 return $app['twig']->render('ctprofile/granted.twig', array('response' => $json ? $json : $response, 'token' => $token, 'endpoint' => $endpoint));
             }
 

@@ -13,6 +13,18 @@ class ControllerProvider implements ControllerProviderInterface
     {
          $app['monolog']->info($message."\n".' query :  '.print_r($app['request']->query, true)."\n".' request :  '.print_r($app['request']->request, true));
     }
+    
+    /**
+     * get current user profile infos
+     * @param \Silex\Application $app
+     * @return type
+     */
+    private function getUserInfo(Application $app)
+    {
+        //@todo
+        return json_encode(array('friends'=>array('matt','joe','john')));
+    }
+            
     public function connect(Application $app)
     {
         // creates a new controller based on the default route
@@ -20,10 +32,11 @@ class ControllerProvider implements ControllerProviderInterface
         
         $controllers->get('/authorize', function (Application $app) {
            $this->log('reveived authorize GET request', $app);
+           $client_id = $app['request']->get('client_id');
             if (!$app['oauth_server']->validateAuthorizeRequest($app['request'])) {
                 return $app['oauth_server']->getResponse();
             }
-            return $app['twig']->render('ctauth/authorize.twig');
+            return $app['twig']->render('ctauth/authorize.twig', array('client_id'=>$client_id));
         })->bind('authorize');
 
         $controllers->post('/authorize', function (Application $app) {
@@ -46,7 +59,7 @@ class ControllerProvider implements ControllerProviderInterface
             if (!$server->verifyAccessRequest($app['request'])) {
                 return $server->getResponse();
             } else {
-                return new Response(print_r(array('friends' => array('john', 'matt', 'jane'))));
+                return new Response($this->getUserInfo($app));
             }
         })->bind('access');
 

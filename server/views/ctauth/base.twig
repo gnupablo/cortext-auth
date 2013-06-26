@@ -9,26 +9,54 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ app.request.basePath }}/css/reset.css">
+        <link rel="stylesheet" href="{{ app.request.basePath }}/css/login.css">
 
-        <link rel="stylesheet" href="{{ app.request.basePath }}/css/lockdin.css">
-        <link rel="stylesheet" href="{{ app.request.basePath }}/css/shared.css">
+
+
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <!--{ include 'analytics.twig' %}
-        { include 'github.twig' %}-->
-        {% include 'ctauth/header.html' %}
-
-        <div id="container">
-            <article class="home" role="main">
-                <div id="content" role="main">
-                  {% block content %}
-                  {% endblock %}
+        <div id="container"> 
+        <div class="navbar">
+                <div class="navbar-inner">
+                    <ul class="nav">
+                    {% if app.user %}
+                            <li><a href="{{ path('user') }}"><i class="icon-user"></i> {{ app.user.displayName }}</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="{{ path('user.logout') }}"><i class="icon-off"></i> Sign out</a></li>
+                    {% else %}
+                            <li><a href="{{ path('user.login') }}">Sign in</a></li>
+                            <li class="divider-vertical"></li>
+                            <li><a href="{{ path('user.register') }}">Create account</a></li>
+                    {% endif %}
+                        </ul>
+               </div>
+         </div>
+        <header>
+           {% block header %}
+               <img alt="cortext platform logo" src="/images/logo_cortext.png">
+           {% endblock %}
+        </header>
+        <div id="content"> 
+            <div id="main">
+                {% block content %}
+                {% endblock %}
                 </div>
-            </article>
+            </div><!--content-->
+            <div id="footer">
+                <ul id="contact">
+                    <li><span>admin contact</span><a href="mailto:webmaster@cortext.fr">webmaster[at]cortext[dot]fr</a></li>
+                    <li><span>website</span><a href="http://www.cortext.fr">www.cortext.fr</a></li>
+                    <li><span>version</span><a href="#">V2.0.0/api</a></li>
+                    <li><span>standards</span><a href="http://www.w3.org/TR/html5/">html5+css3 : please use html5-compliant browser !</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </body>
-</html>
+            </body>
+        </html>
