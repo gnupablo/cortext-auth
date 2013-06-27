@@ -1,0 +1,3 @@
+[submodule "server/vendor/cortext/silex-simpleuser"]
+	path = server/vendor/cortext/silex-simpleuser
+	url = git@github.com:cortext/silex-simpleuser.git

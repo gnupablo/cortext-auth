@@ -69,10 +69,8 @@ $app['security.role_hierarchy'] =array(
 // throws 'InvalidArgumentException' with message 'Identifier "security.remember_me.service.secured_area" is not defined.'
 $app->register(new Provider\RememberMeServiceProvider());
 
-// These services are only required if you use the optional SimpleUser controller provider for form-based authentication.
-
-
-
+//Mail service (use to recover password)
+$app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
 // SimpleUser service provider.
 $app->register($u = new SimpleUser\UserServiceProvider());
