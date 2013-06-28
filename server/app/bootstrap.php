@@ -71,6 +71,15 @@ $app->register(new Provider\RememberMeServiceProvider());
 
 //Mail service (use to recover password)
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
+$app['swiftmailer.options'] = array(
+    'host'       => 'smtp2.phpnet.org',
+    'port'       => 25,
+//    'username'   => 'silex.swiftmailer@gmail.com',
+//    'password'   => 'simplepassword',
+//    'encryption' => 'ssl',
+//    'auth_mode'  => 'login'
+);
+
 
 // SimpleUser service provider.
 $app->register($u = new SimpleUser\UserServiceProvider());
