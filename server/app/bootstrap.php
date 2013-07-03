@@ -31,6 +31,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 //twig extension
 $app['twig']->addExtension(new Ctprofile\Twig\JsonStringifyExtension());
 
+
 //////// Security providers /////////
 //////// see https://github.com/jasongrimes/silex-simpleuser ///
 
@@ -64,6 +65,11 @@ $app['security.role_hierarchy'] =array(
     'ROLE_ADMIN' => array('ROLE_USER')
     );
 
+//fix twig  'is_granted' bug @todo : do it with config, not with a hard fix...
+$function = new Twig_SimpleFunction('is_granted', function($role) use ($app){
+    return $app['security']->isGranted($role);
+});
+$app['twig']->addFunction($function);
 
 // Note: As of this writing, RememberMeServiceProvider must be registered *after* SecurityServiceProvider or SecurityServiceProvider
 // throws 'InvalidArgumentException' with message 'Identifier "security.remember_me.service.secured_area" is not defined.'
@@ -116,5 +122,11 @@ $app->get('/', function() use($app)
             $app['monolog']->info('Application profile started');
             return $app['twig']->render('ctprofile/index.twig');
         })->bind('homepage');
+
+        
+//Create admin user
+//$user = $app['user.manager']->createUser('webmaster@cortext.fr', 'c0rtext', 'Web Master', array('ROLE_ADMIN'));
+//$app['user.manager']->insert($user);
+
 
 return $app;

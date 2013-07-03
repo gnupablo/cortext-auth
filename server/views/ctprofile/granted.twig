@@ -3,13 +3,13 @@
 {% block content %}
     <h3>Token Retrieved!</h3>
     <pre><code>  Access Token: {{ token }}  </code></pre>
-    {% if response.friends is defined %}
+    {% if response.profile is defined %}
+    {% for item in response.profile %}
         <p>
-            Here are your friends:
+            Here are your profile:
         </p>
         <ul>
-            {% for friend in response.friends %}
-                <li>{{ friend }}</li>
+                <li>{{ item }}</li>
             {% endfor %}
         </ul>
     {% else %}
