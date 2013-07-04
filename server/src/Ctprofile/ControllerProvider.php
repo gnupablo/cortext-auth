@@ -66,7 +66,7 @@ class ControllerProvider implements ControllerProviderInterface
                 $token = $json['access_token'];
                 // make request to the API for awesome data
                 $params = array_merge(array('access_token' => $token), $app['parameters']['resource_params']);
-                $apiRoute = $app['parameters']['resource_route'];
+                $apiRoute = $app['parameters']['resource_route']; // /access by default
                 $endpoint = 0 === strpos($apiRoute, 'http') ? $apiRoute : $app['url_generator']->generate($apiRoute, array(), true);
                 $response = $curl->request($endpoint, $params, $app['parameters']['resource_method'], $app['parameters']['curl_options']);
                 //die(print_r($response['response']));

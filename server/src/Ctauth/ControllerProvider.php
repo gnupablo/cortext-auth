@@ -16,14 +16,14 @@ class ControllerProvider implements ControllerProviderInterface
     }
 
     /**
-     * get current user profile infos
+     * get user profile infos
      * @param \Silex\Application $app
      * @return type
      */
-    private function getUserInfo(Application $app)
+    private function getUserProfile(Application $app, $userId)
     {
-        $user = $app['user.manager']->getUser();        
-        return json_encode($user->getuserInfos());
+        $userProfile = $app['user.manager']->getUserProfile($userId);        
+        return json_encode($userProfile());
     }
 
     public function connect(Application $app)
@@ -62,8 +62,6 @@ class ControllerProvider implements ControllerProviderInterface
                 {
                     $this->log('received access request: ', $app);
                     $server = $app['oauth_server'];
-                    $this->log('verifying access request: '.$server->verifyAccessRequest($app['request']), $app);
-                    $this->log('user profile : '.json_encode($this->getUserInfo($app)));  
                     if (!$server->verifyAccessRequest($app['request']))
                     {
                         //die(print_r($server->getResponse()));
@@ -72,8 +70,8 @@ class ControllerProvider implements ControllerProviderInterface
                     } else
                     {
                         //die(print_r($server->getResponse()));
-                        $this->log("access ok, getting user profile: ".$this->getUserInfo($app));
-                        return new Response(array('profile'=>$this->getUserInfo($app)));
+                        $this->log("access ok, getting user profile: ".$this->getUserProfile($app));
+                        return new Response(array('profile'=>$this->getUserProfile($app)));
                     }
                 })->bind('access');
 
