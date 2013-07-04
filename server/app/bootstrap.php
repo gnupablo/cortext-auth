@@ -35,7 +35,10 @@ $app['twig']->addExtension(new Ctprofile\Twig\JsonStringifyExtension());
 //////// Security providers /////////
 //////// see https://github.com/jasongrimes/silex-simpleuser ///
 
-$app->register(new Provider\DoctrineServiceProvider(), array('db.options' => $app['parameters']['db_options']));
+$dbOptions = $app['parameters']['db_options'];
+//die(var_dump($dbOptions));
+
+$app->register(new Provider\DoctrineServiceProvider(), array('db.options' => $dbOptions));
 
 $app->register(new Provider\SecurityServiceProvider());
 $app['security.firewalls'] = array(
