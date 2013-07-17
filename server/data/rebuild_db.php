@@ -5,7 +5,7 @@ $params = array(
    'dbname' => 'ct_oauth',
     'host' => 'localhost',
     'username' => 'root',
-    'password' => 'sfx4c02m',
+    'password' => 'c0rt3xt',
 );     
 $params['dsn'] = 'mysql:host='.$params['host'];
 //$db = new PDO(sprintf('sqlite://%s', $dir));
