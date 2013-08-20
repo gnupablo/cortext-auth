@@ -22,8 +22,7 @@ class ControllerProvider implements ControllerProviderInterface
      */
     private function getUserProfile(Application $app, $userId)
     {
-        $userProfile = $app['user.manager']->getUserProfile($userId);        
-        return json_encode($userProfile());
+        return $app['user.manager']->getUserProfile($userId);        
     }
 
     public function connect(Application $app)
@@ -35,24 +34,27 @@ class ControllerProvider implements ControllerProviderInterface
                 {
                     $this->log('reveived authorize GET request', $app);
                     $client_id = $app['request']->get('client_id');
+                    $user = $app['user.manager']->getCurrentUser();
+                    // if(!$user) die('no user !');
                     if (!$app['oauth_server']->validateAuthorizeRequest($app['request']))
                     {
                         return $app['oauth_server']->getResponse();
                     }
-                    return $app['twig']->render('ctauth/authorize.twig', array('client_id' => $client_id));
+                    return $app['twig']->render('ctauth/authorize.twig', array('client_id' => $client_id, 'user'=>$user));
                 })->bind('authorize');
 
         $controllers->post('/authorize', function (Application $app)
                 {
-                    $this->log('reveived authorize POST request : ', $app);
+                    $userId = $app['user.manager']->getCurrentUser()->getId();
+                    $this->log('reveived authorize POST request for user : '.$userId , $app);
                     $authorized = (bool) $app['request']->request->get('authorize');
 
-                    return $app['oauth_server']->handleAuthorizeRequest($app['request'], $authorized);
+                    return $app['oauth_server']->handleAuthorizeRequest($app['request'], $authorized, $userId);
                 })->bind('authorize_post');
 
         $controllers->post('/grant', function(Application $app)
                 {
-                    $this->log('reveived grant request : ', $app);
+                    $this->log('received grant request : code : '.$app['request']->get('code'), $app);
 
                     //$app['monolog']->info('[oauthserver] grant response : '.print_r($r));
                     return $app['oauth_server']->handleGrantRequest($app['request']);
@@ -60,7 +62,7 @@ class ControllerProvider implements ControllerProviderInterface
 
         $controllers->get('/access', function(Application $app)
                 {
-                    $this->log('received access request: ', $app);
+                    $this->log('received access request: access token :'.$app['request']->get('access_token'), $app);
                     $server = $app['oauth_server'];
                     if (!$server->verifyAccessRequest($app['request']))
                     {
@@ -69,9 +71,12 @@ class ControllerProvider implements ControllerProviderInterface
                         return $server->getResponse();
                     } else
                     {
+
                         //die(print_r($server->getResponse()));
-                        $this->log("access ok, getting user profile: ".$this->getUserProfile($app));
-                        return new Response(array('profile'=>$this->getUserProfile($app)));
+                        $tokenDatas = $server->getAccessTokenData($app['request']);
+                        $this->log('token datas retrieved :'.json_encode($tokenDatas), $app);
+                        $this->log("access ok, getting user profile: ".$this->getUserProfile($app, $tokenDatas['user_id']), $app);
+                        return new Response(json_encode(array('profile'=>$this->getUserProfile($app, $tokenDatas['user_id']))));
                     }
                 })->bind('access');
 

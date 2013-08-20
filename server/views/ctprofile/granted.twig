@@ -4,10 +4,11 @@
     <h3>Token Retrieved!</h3>
     <pre><code>  Access Token: {{ token }}  </code></pre>
     {% if response.profile is defined %}
-    {% for item in response.profile %}
         <p>
-            Here are your profile:
+            Here are your profile infos:
         </p>
+    {% for item in response.profile %}
+       
         <ul>
                 <li>{{ item }}</li>
             {% endfor %}
