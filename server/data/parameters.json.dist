@@ -6,12 +6,12 @@
   "resource_route": "access",
   "resource_method": "GET",
   "resource_params": {},
-  "curl_options": {}
+  "curl_options": {},
   "db_options": {
-       "driver"    : "sqlite",
+       "driver"    : "pdo_mysql",
        "dbname" : "ct_oauth",
         "host" : "localhost",
-        "username" : "user",
-        "password" : "passwd",
+        "username" : "root",
+        "password" : "c0rt3xt"
     }
 }
