@@ -76,7 +76,7 @@ class ControllerProvider implements ControllerProviderInterface
                         $tokenDatas = $server->getAccessTokenData($app['request']);
                         $this->log('token datas retrieved :'.json_encode($tokenDatas), $app);
                         $this->log("access ok, getting user profile: ".$this->getUserProfile($app, $tokenDatas['user_id']), $app);
-                        return new Response(json_encode(array('profile'=>$this->getUserProfile($app, $tokenDatas['user_id']))));
+                        return new Response(json_encode($this->getUserProfile($app, $tokenDatas['user_id'])));
                     }
                 })->bind('access');
 
