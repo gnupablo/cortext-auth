@@ -61,7 +61,8 @@ $app['security.firewalls'] = array(
 );
 
 $app['security.access_rules'] = array(
-    array('^/$', 'ROLE_USER')
+    array('^/$', 'ROLE_USER'),
+    array('^/auth/authorize.*', 'ROLE_USER')
 ); 
 
 $app['security.role_hierarchy'] =array(
