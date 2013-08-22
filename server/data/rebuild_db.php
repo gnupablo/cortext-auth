@@ -21,6 +21,7 @@ $db->exec('DROP TABLE IF EXISTS oauth_clients');
 $db->exec('DROP TABLE IF EXISTS oauth_access_tokens ');
 $db->exec('DROP TABLE IF EXISTS oauth_authorization_codes');
 $db->exec('DROP TABLE IF EXISTS oauth_refresh_tokens');
+$db->exec('DROP TABLE IF EXISTS users');
 
 $db->exec('CREATE TABLE oauth_clients (client_id TEXT, client_secret TEXT, redirect_uri TEXT)');
 $db->exec('CREATE TABLE oauth_access_tokens (access_token TEXT, client_id TEXT, user_id TEXT, expires TIMESTAMP, scope TEXT)');
@@ -38,7 +39,9 @@ $db->exec("CREATE TABLE `users` (
   UNIQUE KEY `unique_email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;");
 // add test data
-$db->exec('INSERT INTO oauth_clients (client_id, client_secret) VALUES ("demoapp", "demopass")');
+$db->exec("INSERT INTO `oauth_clients` (client_id, client_secret) VALUES ('demoapp', 'demopass')");
+$db->exec("INSERT INTO `oauth_clients` (`client_id` ,`client_secret`) VALUES ('cortext-dashboard',  'c0rt3xt')");
+
 echo "\nDatabase ".$params['dbname']." successfully created.\n";
 //chmod($dir, 0777);
 // $db->exec('INSERT INTO oauth_access_tokens (access_token, client_id) VALUES ("testtoken", "Some Client")');

@@ -60,6 +60,14 @@ class ControllerProvider implements ControllerProviderInterface
                     return $app['oauth_server']->handleGrantRequest($app['request']);
                 })->bind('grant');
 
+        $controllers->post('/refresh', function(Application $app)
+                {
+                    $this->log('received refresh request : code : '.$app['request']->get('refresh_token'), $app);
+
+                    //$app['monolog']->info('[oauthserver] grant response : '.print_r($r));
+                    return $app['oauth_server']->handleGrantRequest($app['request']);
+                })->bind('refresh');
+
         $controllers->get('/access', function(Application $app)
                 {
                     $this->log('received access request: access token :'.$app['request']->get('access_token'), $app);
@@ -75,7 +83,7 @@ class ControllerProvider implements ControllerProviderInterface
                         //die(print_r($server->getResponse()));
                         $tokenDatas = $server->getAccessTokenData($app['request']);
                         $this->log('token datas retrieved :'.json_encode($tokenDatas), $app);
-                        $this->log("access ok, getting user profile: ".$this->getUserProfile($app, $tokenDatas['user_id']), $app);
+                        $this->log("access ok, getting user profile: ".json_encode($this->getUserProfile($app, $tokenDatas['user_id'])), $app);
                         return new Response(json_encode($this->getUserProfile($app, $tokenDatas['user_id'])));
                     }
                 })->bind('access');
