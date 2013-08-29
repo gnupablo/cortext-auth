@@ -106,7 +106,7 @@ $app['oauth_storage'] = function ($app)
 $app['oauth_server'] = function($app)
         {
             /* OAuth2\HttpFondation\Server is a wrapper for OAuth2_Server which returns HttpFoundation\Request instead of OAuth2_Request */
-            $server = new OAuth2\HttpFoundationBridge\Server($app['oauth_storage']);
+            $server = new OAuth2\HttpFoundationBridge\Server($app['oauth_storage'], array('access_lifetime'=> $app['parameters']['oauth']['access_lifetime']));
             $server->addGrantType(new OAuth2_GrantType_AuthorizationCode($app['oauth_storage']));
             $server->addGrantType(new OAuth2_GrantType_RefreshToken($app['oauth_storage']));
             return $server;

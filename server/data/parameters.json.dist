@@ -13,5 +13,8 @@
         "host" : "localhost",
         "username" : "root",
         "password" : "c0rt3xt"
-    }
+    },
+  "oauth": {
+    "access_lifetime": 31536000
+  }
 }
