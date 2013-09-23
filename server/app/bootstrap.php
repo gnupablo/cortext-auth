@@ -116,7 +116,8 @@ $app['oauth_server'] = function($app)
 
 
 ////// mounting points
-// please see the Controller classes in src/Ctprofile/Controller and src/LockdIn/Controller for more information
+// please see the Controller classes in src/Ctprofile/Controller and src/Ctprofile/Controller for more information
+$app['monolog']->info('Application parameters :'.print_r($app['parameters'], true));
 $app->mount('/auth', new Ctauth\ControllerProvider());
 $app->mount('/profile', new Ctprofile\ControllerProvider());
 // mounting /user

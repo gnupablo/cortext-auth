@@ -32,6 +32,8 @@ if($parameters['db_options']['driver']=='pdo_sqlite')
     $dbfile = $dbDir.'/'.$parameters['db_options']['dbname'];
 
     $parameters['db_options']['dsn'] = sprintf('sqlite://%s', $dbfile);
+     $parameters['db_options']['path'] = $dbfile;
+
 }
 elseif($parameters['db_options']['driver']=='pdo_mysql'){
 

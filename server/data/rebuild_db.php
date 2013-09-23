@@ -13,10 +13,13 @@ if($params['driver']=='pdo_sqlite'){
     // remove sqlite file if it exists
     if (file_exists($dbfile)) {
         unlink($dbfile);
+        touch($dbfile);
+        chmod($dbfile, 0777);
     }
-
+    
     if (!is_writable($dbDir)) {
         // try to set permissions.
+
         if (!@chmod($dbDir, 0777)) {
             throw new Exception("Unable to write to $dbfile");
         }
@@ -63,14 +66,13 @@ if($params['driver']=='pdo_sqlite'){
                   \"scope\" text
                 );
                 CREATE TABLE \"users\" (
-                  \"id\" int(11)  NOT NULL ,
+                  \"id\"  INTEGER PRIMARY KEY AUTOINCREMENT,
                   \"email\" varchar(100) NOT NULL DEFAULT '',
                   \"password\" varchar(255) NOT NULL DEFAULT '',
                   \"salt\" varchar(255) NOT NULL DEFAULT '',
                   \"roles\" varchar(255) NOT NULL DEFAULT '',
                   \"name\" varchar(100) NOT NULL DEFAULT '',
-                  \"time_created\" int(11) NOT NULL DEFAULT '0',
-                  PRIMARY KEY (\"id\")
+                  \"time_created\" int(11) NOT NULL DEFAULT '0'
                 );
                 CREATE INDEX \"users_unique_email\" ON \"users\" (\"email\");
                 END TRANSACTION;");
