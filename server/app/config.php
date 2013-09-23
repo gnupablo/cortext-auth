@@ -24,6 +24,20 @@ if (!isset($parameters['client_id']))
 
 
 //db dsn     
-$parameters['db_options']['dsn'] = 'mysql:host='.$parameters['db_options']['host'].';dbname='.$parameters['db_options']['dbname'];
+if($parameters['db_options']['driver']=='pdo_sqlite')
+{
+
+    // determine where the sqlite DB will go
+    $dbDir =  __DIR__.'/../data';
+    $dbfile = $dbDir.'/'.$parameters['db_options']['dbname'];
+
+    $parameters['db_options']['dsn'] = sprintf('sqlite://%s', $dbfile);
+}
+elseif($parameters['db_options']['driver']=='pdo_mysql'){
+
+    $parameters['db_options']['dsn'] = 'mysql:host='.$parameters['db_options']['host'].';dbname='.$parameters['db_options']['dbname'];
+
+}
+
 
 $app['parameters'] = $parameters;

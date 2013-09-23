@@ -8,13 +8,13 @@
   "resource_params": {},
   "curl_options": {},
   "db_options": {
-       "driver"    : "pdo_mysql",
-       "dbname" : "ct_oauth",
-        "host" : "localhost",
-        "username" : "root",
-        "password" : "c0rt3xt"
+       "driver"    : "pdo_sqlite",
+       "dbname" : "ct_oauth.sqlite",
+        "host" : "",
+        "username" : "",
+        "password" : ""
     },
-  "oauth": {
+    "oauth": {
     "access_lifetime": 31536000
   }
 }

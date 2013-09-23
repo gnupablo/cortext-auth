@@ -11,9 +11,11 @@ Before anything, be sure to have the following packages :
 
 - php 5.4 (or 5.3.2 if you don't need the standalone web server)
 - php5-curl module
-- php5-sqlite for the default storage configuration, or any storage management package you need
+- default sqlite sorage : php5-sqlite 
+- mySql storage : php5-mysql mysql-server mysql-client 
+- [Composer](http://getcomposer.org/) : this is the fastest way to get this app up and running.  
 
-[Composer](http://getcomposer.org/) is the fastest way to get this app up and running.  First, clone the repository.
+First, clone the repository.
 Then, run composer to install the dependencies
 
     $ git clone git://github.com/cortext/cortext-auth.git
@@ -31,9 +33,23 @@ The fastest way is the standalone php server :
     $ cd server
     $ php -S localhost:3000 -t web web/index.php
 
+(You can also configure a classic apache/nginx virtualHost, with a local domain root redirected to the /server/web directory.)
+
 > and you're done !
 
-**If you need to re-install the app from scratch, don't forget to delete the data/ sqlite database first !**
+Database configuration
+----------------------
+By default sqlite engine is used, and the database is stored in `/server/data/`. To change to a MySql engine, you need to replace the `db_options` statements in your parameters.json file : 
+     
+     "db_options": {
+        "driver"    : "pdo_mysql",
+        "dbname" : "ct_oauth",
+        "host" : "localhost",
+        "username" : "user",
+        "password" : "pass"
+      },
+
+Replace of course your host/user/pass with your settings.
 
 The User management app
 -----------------------
@@ -46,7 +62,7 @@ The User management app
 The OAuth2 Server
 -----------------
 
-The Lock'd In APIs implement the following OAuth2-compatible endpoints:
+The ctProfile APIs implement the following OAuth2-compatible endpoints:
 
    * `/authorize` - endpoint which grants the Demo App an `authorization code`
    * `/grant`     - endpoint which grants the Demo App an `access_token` when supplied with the authorization code above
