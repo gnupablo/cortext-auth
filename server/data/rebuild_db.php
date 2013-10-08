@@ -1,7 +1,7 @@
 <?php
 
 // load params
-require_once '../app/config.php';
+require_once dirname(__FILE__).'/../app/config.php';
 // rebuild the DB
 
 
