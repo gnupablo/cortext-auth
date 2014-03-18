@@ -123,12 +123,16 @@ $app->mount('/profile', new Ctprofile\ControllerProvider());
 // mounting /user
 $app->mount('/user', $u); //$u is defined above as an instance of SimpleUser\UserServiceProvider
 
-$app->get('/', function() use($app)
+$app->get('/test', function() use($app)
         {
             $app['monolog']->info('Application profile started');
             return $app['twig']->render('ctprofile/index.twig');
-        })->bind('homepage');
+        })->bind('test');
 
+$app->get('/', function() use($app)
+        {
+            return $app->redirect('/user');
+        })->bind('homepage');
         
 //Create admin user
 //$user = $app['user.manager']->createUser('webmaster@cortext.fr', 'c0rtext', 'Web Master', array('ROLE_ADMIN'));
