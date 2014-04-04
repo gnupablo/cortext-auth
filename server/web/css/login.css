@@ -4,7 +4,7 @@ Created on : 27 mai 2011, 11:07:07
 Author : Philippe Breucker
 Description:
 css for the login page of cortext
-*/
+
 @import "reset.css";
 
 @font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
@@ -17,6 +17,29 @@ header img{margin-bottom:0px;}
 a{color: #A3A1A1;font: 12px arial;line-height: 36px;}
 a:hover {color: #666768;}
 h1 {font: normal 20px "Oxygen-Regular";color: #444;letter-spacing: 1.5px;margin:auto; margin-top: 0; margin-bottom: 112px;}
+*/
+@font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
+
+#path .dashboard{padding-left:65px;}
+
+#user li{list-style: none; display:inline-block;
+   padding:0;
+   margin:0;}
+
+#user #login-out{
+background: url("/images/power.png") 34px 30px no-repeat  #626262;
+margin-left: -7px;
+padding-left: 5px;
+padding-right: 5px;}
+
+#user #sign{
+background-color:#626262;
+margin-left: -7px;
+padding-left: 5px;
+padding-right: 5px;}
+
+
+.media{margin-top:100px;}
 
 /*forms*/
 
@@ -39,8 +62,6 @@ h1 {font: normal 20px "Oxygen-Regular";color: #444;letter-spacing: 1.5px;margin:
 input,textarea {border: 1px solid gainsboro;color: #BCBBBB;font: 13px arial;width: 190px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-top: 10px;border-radius: 3px; display: table-cell}
 :focus{ color: #6E6E6E !important; border : solid 1px #666768;}
 textarea{height: auto}
-#content{background: #fff;margin :auto; width: 765px;}
-#content .main {}
 #login_wrapper{margin: auto;font : normal 14px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;}
 #login_wrapper input{display: block}
 #form_wrapper {margin-left: 75px}

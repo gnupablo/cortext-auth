@@ -1,0 +1,336 @@
+/*
+
+1. Layout
+2. Generic elements
+3. Specific code
+
+*/
+
+@font-face { font-family: "Oxygen-Regular";         src: url('/font/Oxygen-Regular.ttf'); }
+
+/*****************************************************************************************
+
+        LAYOUT
+
+/*****************************************************************************************/
+
+body {
+        margin : 0px ;
+        background:url(/images/body-bg.png);
+        background-repeat:repeat-x;
+        background-attachment:fixed;
+        overflow-x:hidden; 
+}
+
+#content {
+        z-index:2;
+        margin : 0px auto 0px auto;
+        width:1280px;
+        position:relative;
+        overflow : auto;
+        margin-bottom : 35px;
+}
+
+#header {
+        height: 50px;
+        top : 0px;
+        position: fixed;
+        width: 1280px;
+        z-index: 10;
+}
+
+.container-main {
+    width:765px;
+    float:left;
+    margin-top: 12px;
+}
+
+.container-left {
+        width:255px;
+        float:left;
+        z-index:2;
+        height:inherit;
+        margin-top:13px;
+        margin-bottom:0px;
+        margin-right: 15px;
+}
+
+.container-right{
+    float: left;
+    height: inherit;
+    margin-top:27px;
+    width: 240px;
+}
+
+/*****************************************************************************************
+
+        GENERIC ELEMENTS
+
+/*****************************************************************************************/
+
+/* buttons ---------------------------------------------*/
+
+button, .button{ /*min-width : 120px;*/ background : #FAFAFA; border : 1px solid #DCDCDC; padding : 10px; text-align : center; font : bold 14px arial; 
+color : #6E6E6E; box-shadow: 0px 0px 3px rgba(107,107,107, 0.3); border-radius:3px;cursor: pointer; }
+
+button:not(.inactive):hover, .button:hover { background : #DDDDDD; border : 1px solid #B1B1B1; color : #333333; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); }
+
+button.inactive { color : #DCDCDC !important; cursor: default !important; }
+
+/* HEADER  +  MENU  ************************************************************/
+
+#menu {        
+        height:50px;
+        background-color: #EEF2F6;
+        border-bottom: 3px solid #9C9C9C;
+        position: relative;
+}
+
+#path { 
+        overflow: hidden; 
+}
+
+#path ul {
+         margin:0;
+         list-style-type:none;
+}
+
+#path ul { 
+        position : relative; 
+}
+
+#path ul li {
+        float:left;
+        padding : 0;
+        margin : 0;
+        background-color:#3C3C3C;
+        border-bottom: 3px solid #F772BD;
+        text-transform: lowercase;
+        color : white;
+        display : inline-block;
+        position : relative;
+        overflow: auto;
+}
+
+#path ul li .type { display:block; line-height:20px; font-size : 11px; font-family :  "Oxygen-Regular","Bitstream Vera Sans", Sans-serif; padding : 0 5px; }
+#path ul li .name { display:block; line-height:30px; color : white; text-decoration : none; font-size : 16px; letter-spacing : 2px; font-family: "Oxygen-Regular"; padding : 0 8px; }
+#path ul li:hover { cursor: pointer; }
+
+#path ul li.home { position : absolute; top : 0; left : 0; width : 60px; z-index : 1; overflow : hidden; }
+
+#path ul .Project { border-bottom:3px solid #32B9E5; }
+#path ul .Project .type { background-color:#235BBE; border-color : #9c96a7; }
+
+#path ul .user { border-bottom:3px solid #F3BE00; }
+#path ul .user .type { background-color: #EE6E21; }
+
+#path ul .Project + li .name { background-color : #777777; }
+
+#path ul .Image { border-bottom:3px solid #F5A4DA; }
+#path ul .Image .type { background-color: #E62E60; }
+
+#path ul .Analysis { border-bottom:3px solid #D0D644; }
+#path ul .Analysis .type { background-color: #34B02C; }
+
+#path ul .Message { border-bottom:3px solid #FFFB61; }
+#path ul .Message .type { background-color: #FFD505; }
+
+#path ul .dashboard .type { display : none; }                
+#path ul .dashboard .name { line-height : 50px; }                
+
+#path .home { padding : 0; border : 0; }
+
+#path ul .add-friend-project {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add.png") no-repeat; border: none;margin-top:15px;display:none;}
+#path ul .add-friend-project:hover {height: 34px; width: 34px; margin-left: 10px;background: url("/images/add-hover.png") no-repeat; border: none;margin-top:15px;cursor: pointer;display:none;}
+
+
+#add-friend-panel{
+    height:110px;
+    width: 255px; 
+    background-color: #fff;
+    border: 1px solid #DCDCDC; 
+    margin-top:20px; 
+    display: none;}
+
+#add-friend-panel .add{
+    height:35px;
+    width: 90px; 
+    margin-left: 23px;
+    margin-top:15px;
+    padding: 4px;
+}
+
+#add-friend-panel p{
+    font: normal 12px/1.4em Arial, sans-serif;
+    color:#909090;
+    margin-top: 10px;
+
+    
+}
+
+#user {
+        position : absolute;
+        top : 0;
+        right : 0;
+        padding : 0 7px;
+        display : inline-block;
+        border-bottom : 3px solid #9C96A7;
+        background: #3C3C3C;                
+        background-position: 65px 38px;        
+}
+
+#user a {
+        color: #FFFFFF;
+    display: block;
+    font-family: "Oxygen-Regular";
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 50px;
+           text-decoration: none;
+        text-transform: lowercase;
+}
+
+#user a:hover {
+        text-decoration:underline;
+}
+
+#user .btn{
+        background:#3C3C3C;
+        color:#F9F9F9;
+        border : 1px solid #303030;
+}
+
+#user .btn:hover{
+        background:#2f2f2f;
+        color:#FFFFFF;
+        border : 1px solid #161616;
+}
+
+#user img {
+    border: 5px solid #626262;
+    float: left;
+    height: 40px;
+    margin-left: -7px;
+    margin-right: 10px;
+    width: 40px;
+}
+
+p{
+   font: normal 15px/1.4em Arial, sans-serif;
+   color:#909090;
+   margin: auto;
+   margin-left: 20px;
+}
+/* HELP DOCUMENTATION  ************************************************************/
+
+.help {
+        z-index:3;
+        position: fixed;
+        display:none;
+        top: 80px;
+        right: 0;
+        width: 160px;
+        background:#EEF2F6;        
+        height: auto;
+        padding:0px 65px 0px 0px;
+}
+
+.help h3 {
+        color:#fff;
+        background: url("/images/start.png") no-repeat 205px 7px #3C3C3C ;
+        font: 14px/30px "Oxygen-regular",sans-serif;
+        letter-spacing: 2px;
+        width: 225px;
+        padding-left:20px;
+        margin-bottom:12px;
+}
+
+.help h4 {
+        margin-left:20px;
+        width:175px;
+        padding-bottom:12px;
+}
+
+#separator{
+        width:225px;
+        height:7px;
+        background:#FFF;
+        margin-bottom:12px;
+}
+
+.help a{
+        color:#737373;
+        font: normal 13px Arial, sans-serif;
+        text-decoration:none;
+}
+
+.letter{
+        display:block;
+}
+
+.help a:hover{
+        color: #3C3C3C;
+}
+
+.trigger{
+        z-index:4;
+        color: #fff;
+        font:12px/17px "Oxygen-regular",sans-serif;
+        text-decoration:none;
+        text-transform:uppercase;        
+        position: fixed;
+        text-decoration: none;
+        top: 80px; right: 0;
+        padding:6px 13px;
+        background:#3C3C3C ; 
+        display: block;
+}
+
+.help #question-panel{
+        position: absolute;
+        width: 225px;
+        padding: 8px 0px 12px 0px;
+        background:#EEF2F6/*#FAFAFA*/;
+        display: none;
+        right: 0;
+    top:122px;
+}
+        
+.help form p{
+        width:170px;
+        margin:0px auto 0px auto;
+}
+        
+.help form textarea{ 
+        border: 1px solid #DCDCDC;
+    color: #909090;
+    font: 12px arial;
+         margin-bottom:10px;
+    width:inherit;         
+}
+
+.help #help-question h4{
+        width: 200px;
+}
+        
+.help #help-question .send-question{        
+        background:#E93F44;
+    border: 1px solid #B53135;
+    color: #FFFFFF;
+    height: 24px;
+    width: 173px;
+        padding-top:2px;
+}
+
+.help #help-question .send-question:hover{        
+        background: #e6282e;
+    border: 1px solid #a12c2f;
+}                        
+
+        
+/* MAIN  ************************************************************/
+
+#main{
+        position : relative;
+        padding-top : 50px;
+}
