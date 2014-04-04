@@ -27,19 +27,42 @@ h1 {font: normal 20px "Oxygen-Regular";color: #444;letter-spacing: 1.5px;margin:
    margin:0;}
 
 #user #login-out{
-background: url("/images/power.png") 34px 30px no-repeat  #626262;
+background: url("/images/power.png") 34px 30px no-repeat  #9e1d43;
 margin-left: -7px;
 padding-left: 5px;
-padding-right: 5px;}
+padding-right: 5px;
+border-bottom: 3px solid #F772BD;}
+
 
 #user #sign{
-background-color:#626262;
+background-color:#9e1d43;
+border-bottom: 3px solid #F772BD;
 margin-left: -7px;
 padding-left: 5px;
 padding-right: 5px;}
 
+#user #user-name img{
+margin-left: -4px;
+}
 
-.media{margin-top:100px;}
+#user #user-name{
+      border-bottom: 3px solid #9C96A7;
+    margin-left: -4px;
+    margin-right: -11px;
+    padding-left: 4px;
+    padding-right: 8px;
+}
+
+#user #create-account{
+    border-bottom: 3px solid #9C96A7;
+    margin-left: -11px;
+    margin-right: -7px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+#content2{margin-top:100px;}
 
 /*forms*/
 

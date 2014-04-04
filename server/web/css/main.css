@@ -174,7 +174,7 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
         right : 0;
         padding : 0 7px;
         display : inline-block;
-        border-bottom : 3px solid #9C96A7;
+     /*   border-bottom : 3px solid #9C96A7;*/
         background: #3C3C3C;                
         background-position: 65px 38px;        
 }
