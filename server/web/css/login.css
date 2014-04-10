@@ -90,8 +90,8 @@ margin-top: 25px;
 .media-user-info .control-label a{
 color: #909090;
 font: 13px Arial,sans-serif;
-
 }
+
 #content2 .user-information{
 background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
 margin-top: 25px;
@@ -150,6 +150,64 @@ padding-left: 35px;
 margin-top:15px;
 }
 
+.controls .control-label{
+color: #3A3A3A;
+font: 14px Arial,sans-serif;
+margin-right: 25px; 
+}
+
+.controls .help-inline{
+color: #909090;
+font: 14px Arial,sans-serif;
+margin-left: 25px; 
+}
+
+.controls .save-info{
+    background: #2CC31C;
+    border: 1px solid #1D8912;
+    color: #FFFFFF;
+    height: 34px;
+    margin-right:16px;
+    margin-left: 152px;
+    margin-top: 10px;
+    padding-top: 6px;
+    width: 230px;
+}
+
+.controls .save-info:hover{
+background: #27AD19;
+border: 1px solid #1D8912;
+color: #fff;
+transition: background-color 0.3s ease-in-out 0s;
+}
+
+.controls a{
+color: #909090;
+font: 14px Arial,sans-serif;
+margin-left: 25px; 
+}
+
+.control-group{
+margin-top: 15px; 
+margin-left: 50px;
+}
+
+.control-group #input-name{
+margin-left: 85px;
+}
+
+.control-group #input-email{
+margin-left: 87px;
+}
+
+.control-group #input-password{
+margin-left: 30px;
+}
+
+.control-group #input-confirm-password{
+margin-left: 8px;
+}
+
 
 /*forms*/
 
@@ -169,7 +227,7 @@ margin-top:15px;
 
 .main #frm_signin .name, .main #frm_signin .password {float:left;margin-left:110px;margin-top:8px;}	
 	
-input,textarea {border: 1px solid gainsboro;color: #BCBBBB;font: 13px arial;width: 190px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-top: 10px;border-radius: 3px; display: table-cell}
+input,textarea {border: 1px solid gainsboro;color: #BCBBBB;font: 13px arial;width: 220px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-top: 10px;border-radius: 3px; display: table-cell}
 :focus{ color: #6E6E6E !important; border : solid 1px #666768;}
 textarea{height: auto}
 #login_wrapper{margin: auto;font : normal 14px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;}
