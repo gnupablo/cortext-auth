@@ -1,23 +1,7 @@
 /*
-Document : login.css
-Created on : 27 mai 2011, 11:07:07
-Author : Philippe Breucker
-Description:
 css for the login page of cortext
-
-@import "reset.css";
-
-@font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
-
-body {background: #fff center 50px no-repeat; font-family: "Oxygen-Regular" }
-p{ font: normal 14px/18px  "Oxygen-Regular"  ; color: #4d4d4d; text-align: left}
-#container { width:1280px;margin : auto; text-align: center}
-header {height: 50px; width: 765px;margin: auto; margin-top: 70px; text-align: center; background: #fff !important}
-header img{margin-bottom:0px;}
-a{color: #A3A1A1;font: 12px arial;line-height: 36px;}
-a:hover {color: #666768;}
-h1 {font: normal 20px "Oxygen-Regular";color: #444;letter-spacing: 1.5px;margin:auto; margin-top: 0; margin-bottom: 112px;}
 */
+
 @font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
 
 #path .dashboard{padding-left:65px;}
@@ -61,8 +45,106 @@ margin-left: -4px;
     padding-right: 8px;
 }
 
+/*user*/
 
-#content2{margin-top:100px;}
+#content2{margin-top:65px;}
+
+.media{
+margin-left: 270px;
+width: 750px;
+}
+
+#media-user-info{
+height: 170px;
+border: 1px solid #DCDCDC;
+}
+
+#media-user-info .muted{
+color: #909090;
+font: 15px Arial,sans-serif;
+margin-left: 2px;
+margin-top: 2px;
+}
+
+#media-user-info #gravatar{
+border-right: 1px solid #DCDCDC;
+float: left;
+height: 170px;
+width: 170px;
+margin-right:25px;
+}
+
+#media-user-info #gravatar img{
+border: 1px solid #EEF2F6;
+height: 140px;
+margin: 14px auto 0 14px;
+width: 140px;
+}
+
+#media-user-info h1{
+color: #3A3A3A;
+font: 22px Arial,sans-serif;
+margin-top: 25px;
+}
+
+.media .user-information{
+background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
+margin-top: 25px;
+padding-left: 10px;
+padding-top: 4px;
+color: #FFFFFF;
+font: 17px "Oxygen-Regular",sans-serif;
+height: 25px;
+letter-spacing: 0.1em;
+width: 740px;
+}
+
+
+.profile .table-user{
+border: 1px solid #E6E6E6;
+height: 40px;
+margin-bottom: 10px;
+margin-top: 15px;
+width: 750px;
+}
+
+.profile .table-user p{
+color: #909090;
+font: 14px Arial,sans-serif;
+margin-top:12px;
+margin-left: 10px;
+display: inline-block;
+}
+.profile .table-user .key{
+width: 250px;
+}
+.profile .table-user .item{
+color: #3A3A3A;
+font: 14px Arial,sans-serif;
+margin-top:12px;
+}
+
+#edit-user a{
+color: #909090;
+font: 14px Arial,sans-serif;
+margin-top:12px; 
+text-decoration: none;  
+margin-right: 25px; 
+}
+
+#edit-user a:hover{
+color: #666667;
+}
+
+#edit-user{
+background: url("/images/edit.png") no-repeat 2px 0px;
+float: right;
+width: 30px;
+height: 40px; 
+padding-left: 35px; 
+margin-top:15px;
+}
+
 
 /*forms*/
 
