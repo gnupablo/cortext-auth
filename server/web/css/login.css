@@ -220,6 +220,10 @@ margin-left: 87px;
 margin-left: 60px;
 }
 
+.control-group #input-newpassword{
+margin-left: 30px;
+}
+
 .control-group #input-confirm-password{
 margin-left: 8px;
 }
@@ -235,11 +239,11 @@ margin-left: 60px;
 
 #content2 .info-sign{
     color: #444444;
-    font: 20px "Oxygen-Regular";
+    font: 24px "Oxygen-Regular";
     letter-spacing: 1.5px;
     margin-left: 50px;
     margin-top:100px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     }
 
 #content2 .infosign{
