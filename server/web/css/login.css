@@ -217,22 +217,34 @@ margin-left: 60px;
 }
 
 #content2 .info-sign{
-    color: #3A3A3A;
-    font: 22px Arial,sans-serif;
-    letter-spacing: 0.1em;
-    margin-left: 160px;
+    color: #444444;
+    font: 20px "Oxygen-Regular";
+    letter-spacing: 1.5px;
+    margin-left: 180px;
     margin-top:100px;
     margin-bottom: 40px;
     }
 
 #content2 .infosign{
-    color: #909090;
+    color: #3A3A3A;
     font: 14px Arial,sans-serif;
     margin-top:35px;
+    }
+#content2 .infosign a{
+    color: #235BBE;
+    margin-left:15px;
+    }     
+
+.controls .case{
+    height: 14px;
+    width: 22px;
     } 
-
-
-
+.controls .case-label {
+    color: #3A3A3A;
+    font: 14px Arial,sans-serif;
+    margin-left: -49px;
+}    
+   
 /*forms*/
 
 #frm_signin span a{margin-left:43px;}
