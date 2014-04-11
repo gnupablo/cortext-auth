@@ -168,7 +168,19 @@ margin-left: 25px;
     color: #FFFFFF;
     height: 34px;
     margin-right:16px;
-    margin-left: 152px;
+    margin-left: 153px;
+    margin-top: 10px;
+    padding-top: 6px;
+    width: 230px;
+}
+
+.controls .btn-danger {
+    background: #2CC31C;
+    border: 1px solid #1D8912;
+    color: #FFFFFF;
+    height: 34px;
+    margin-right:16px;
+    margin-left: 188px;
     margin-top: 10px;
     padding-top: 6px;
     width: 230px;
@@ -219,6 +231,7 @@ margin-left: 85px;
 .control-group #inputPassword{
 margin-left: 60px;
 }
+
 
 #content2 .info-sign{
     color: #444444;
