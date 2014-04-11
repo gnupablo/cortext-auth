@@ -6,43 +6,46 @@ css for the login page of cortext
 
 #path .dashboard{padding-left:65px;}
 
-#user li{list-style: none; display:inline-block;
-   padding:0;
-   margin:0;}
+#user li{
+        list-style: none; display:inline-block;
+        padding:0;
+        margin:0;
+}
 
 #user #login-out{
-background: url("/images/power.png") 34px 30px no-repeat  #9e1d43;
-margin-left: -7px;
-padding-left: 5px;
-padding-right: 5px;
-border-bottom: 3px solid #F772BD;}
-
+        background: url("/images/power.png") 34px 30px no-repeat  #9e1d43;
+        margin-left: -7px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: 3px solid #F772BD;
+}
 
 #user #sign{
-background-color:#9e1d43;
-border-bottom: 3px solid #F772BD;
-margin-left: -7px;
-padding-left: 5px;
-padding-right: 5px;}
+        background-color:#9e1d43;
+        border-bottom: 3px solid #F772BD;
+        margin-left: -7px;
+        padding-left: 5px;
+        padding-right: 5px;
+}
 
 #user #user-name img{
-margin-left: -4px;
+        margin-left: -4px;
 }
 
 #user #user-name{
-      border-bottom: 3px solid #9C96A7;
-    margin-left: -4px;
-    margin-right: -11px;
-    padding-left: 4px;
-    padding-right: 8px;
+        border-bottom: 3px solid #9C96A7;
+        margin-left: -4px;
+        margin-right: -11px;
+        padding-left: 4px;
+        padding-right: 8px;
 }
 
 #user #create-account{
-    border-bottom: 3px solid #9C96A7;
-    margin-left: -11px;
-    margin-right: -7px;
-    padding-left: 8px;
-    padding-right: 8px;
+        border-bottom: 3px solid #9C96A7;
+        margin-left: -11px;
+        margin-right: -7px;
+        padding-left: 8px;
+        padding-right: 8px;
 }
 
 /*user*/
@@ -50,256 +53,269 @@ margin-left: -4px;
 #content2{margin-top:65px;}
 
 .media{
-margin-left: 270px;
-width: 750px;
+        margin-left: 270px;
+        width: 750px;
+}
+
+.border-media{
+        border:1px solid #E6E6E6;
 }
 
 .media-user-info{
-height: 170px;
-border: 1px solid #DCDCDC;
+        height: 170px;
+        border: 1px solid #DCDCDC;
 }
 
 .media-user-info .muted{
-color: #909090;
-font: 15px Arial,sans-serif;
-margin-left: 2px;
-margin-top: 2px;
+        color: #909090;
+        font: 15px Arial,sans-serif;
+        margin-left: 2px;
+        margin-top: 2px;
 }
 
 .media-user-info .gravatar{
-border-right: 1px solid #DCDCDC;
-float: left;
-height: 170px;
-width: 170px;
-margin-right:25px;
+        border-right: 1px solid #DCDCDC;
+        float: left;
+        height: 170px;
+        width: 170px;
+        margin-right:25px;
 }
 
 .media-user-info .gravatar img{
-border: 1px solid #EEF2F6;
-height: 140px;
-margin: 14px auto 0 14px;
-width: 140px;
+        border: 1px solid #EEF2F6;
+        height: 140px;
+        margin: 14px auto 0 14px;
+        width: 140px;
 }
 
 .media-user-info h1{
-color: #3A3A3A;
-font: 22px Arial,sans-serif;
-margin-top: 25px;
+        color: #3A3A3A;
+        font: 22px Arial,sans-serif;
+        margin-top: 25px;
 }
 
 .media-user-info .control-label a{
-color: #909090;
-font: 13px Arial,sans-serif;
+        color: #909090;
+        font: 13px Arial,sans-serif;
 }
 
 #content2 .user-information{
-background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
-margin-top: 25px;
-padding-left: 10px;
-padding-top: 4px;
-color: #FFFFFF;
-font: 17px "Oxygen-Regular",sans-serif;
-height: 25px;
-letter-spacing: 0.1em;
-width: 740px;
+        background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
+        margin-top: 25px;
+        padding-left: 10px;
+        padding-top: 4px;
+        color: #FFFFFF;
+        font: 17px "Oxygen-Regular",sans-serif;
+        height: 25px;
+        letter-spacing: 0.1em;
+        width: 740px;
 }
 
 
 .profile .table-user{
-border: 1px solid #E6E6E6;
-height: 40px;
-margin-bottom: 10px;
-margin-top: 15px;
-width: 750px;
+        border: 1px solid #E6E6E6;
+        height: 40px;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        width: 750px;
 }
 
 .profile .table-user p{
-color: #909090;
-font: 14px Arial,sans-serif;
-margin-top:12px;
-margin-left: 10px;
-display: inline-block;
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        margin-top:12px;
+        margin-left: 10px;
+        display: inline-block;
 }
 .profile .table-user .key{
-width: 250px;
+        width: 250px;
 }
 .profile .table-user .item{
-color: #3A3A3A;
-font: 14px Arial,sans-serif;
-margin-top:12px;
+        color: #3A3A3A;
+        font: 14px Arial,sans-serif;
+        margin-top:12px;
 }
 
 #edit-user a{
-color: #909090;
-font: 14px Arial,sans-serif;
-margin-top:12px; 
-text-decoration: none;  
-margin-right: 25px; 
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        margin-top:12px; 
+        text-decoration: none;  
+        margin-right: 25px; 
 }
 
 #edit-user a:hover{
-color: #666667;
+        color: #666667;
 }
 
 #edit-user{
-background: url("/images/edit.png") no-repeat 2px 0px;
-float: right;
-width: 30px;
-height: 40px; 
-padding-left: 35px; 
-margin-top:15px;
+        background: url("/images/edit.png") no-repeat 2px 0px;
+        float: right;
+        width: 30px;
+        height: 40px; 
+        padding-left: 35px; 
+        margin-top:15px;
 }
 
 .controls .control-label{
-color: #3A3A3A;
-font: 14px Arial,sans-serif;
-margin-right: 25px; 
+        color: #3A3A3A;
+        font: 14px Arial,sans-serif;
+        margin-right: 25px; 
 }
 
 .controls .help-inline{
-color: #909090;
-font: 14px Arial,sans-serif;
-margin-left: 25px; 
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        margin-left: 25px; 
 }
 
 .controls .save-info, .controls .bt-sign{
-    background: #2CC31C;
-    border: 1px solid #1D8912;
-    color: #FFFFFF;
-    height: 34px;
-    margin-right:16px;
-    margin-left: 153px;
-    margin-top: 10px;
-    padding-top: 6px;
-    width: 230px;
+        background: #2CC31C;
+        border: 1px solid #1D8912;
+        color: #FFFFFF;
+        height: 34px;
+        margin-right:16px;
+        margin-left: 153px;
+        margin-top: 10px;
+        padding-top: 6px;
+        width: 230px;
 }
 
 .controls .btn-danger {
-    background: #2CC31C;
-    border: 1px solid #1D8912;
-    color: #FFFFFF;
-    height: 34px;
-    margin-right:16px;
-    margin-left: 188px;
-    margin-top: 10px;
-    padding-top: 6px;
-    width: 230px;
+        background: #2CC31C;
+        border: 1px solid #1D8912;
+        color: #FFFFFF;
+        height: 34px;
+        margin-right:16px;
+        margin-left: 188px;
+        margin-top: 25px;
+        margin-bottom: 35px;
+        padding-top: 6px;
+        width: 230px;
 }
 
 .controls .save-info:hover, .controls .bt-sign:hover{
-background: #27AD19;
-border: 1px solid #1D8912;
-color: #fff;
-transition: background-color 0.3s ease-in-out 0s;
+        background: #27AD19;
+        border: 1px solid #1D8912;
+        color: #fff;
+        transition: background-color 0.3s ease-in-out 0s;
 }
 
 .controls a{
-color: #909090;
-font: 14px Arial,sans-serif;
-margin-left: 25px; 
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        margin-left: 25px; 
 }
 
 .controls a:hover{
-color: #3A3A3A;
+        color: #3A3A3A;
 }
 
 .control-group{
-margin-top: 15px; 
-margin-left: 50px;
+        margin-top: 15px; 
+        margin-left: 50px;
 }
 
 .control-group #input-name{
-margin-left: 85px;
+        margin-left: 85px;
 }
 
 .control-group #input-email{
-margin-left: 87px;
+        margin-left: 87px;
 }
 
 .control-group #input-password{
-margin-left: 60px;
+        margin-left: 60px;
 }
 
 .control-group #input-newpassword{
-margin-left: 30px;
+        margin-left: 30px;
 }
 
 .control-group #input-confirm-password{
-margin-left: 8px;
+        margin-left: 8px;
 }
 
 .control-group #inputEmail{
-margin-left: 85px;
+        margin-left: 85px;
 }
 
 .control-group #inputPassword{
-margin-left: 60px;
+        margin-left: 60px;
 }
 
-
 #content2 .info-sign{
-    color: #444444;
-    font: 24px "Oxygen-Regular";
-    letter-spacing: 1.5px;
-    margin-left: 50px;
-    margin-top:100px;
-    margin-bottom: 50px;
-    }
+        background: url("/images/logo.png") 710px -3px no-repeat  #9C96A7;
+        margin-bottom:45px;
+        padding-left: 10px;
+        padding-top: 4px;
+        color: #FFFFFF;
+        font: 17px "Oxygen-Regular",sans-serif;
+        height: 25px;
+        letter-spacing: 0.1em;
+        width: 740px;
+}
 
 #content2 .infosign{
-    color: #3A3A3A;
-    font: 14px Arial,sans-serif;
-    margin-top:35px;
-    }
+        color: #3A3A3A;
+        font: 14px Arial,sans-serif;
+        margin-top:35px;
+        margin-bottom: 35px;
+}
+
 #content2 .infosign a{
-    color: #235BBE;
-    margin-left:15px;
-    }
+        color: #235BBE;
+        margin-left:15px;
+}
+
 #content2 .infosign a:hover{
-    color: #1b2893
-    }
+        color: #1b2893
+}
 
    #content2 .infosign2{
-    color: #3A3A3A;
-    font: 14px Arial,sans-serif;
-    margin-top:35px;
-    margin-left: 50px;
-    }
+        color: #3A3A3A;
+        font: 14px Arial,sans-serif;
+        margin-top:35px;
+        margin-bottom: 35px;
+        margin-left: 50px;
+}
 
  #content2 .infosign2 a{
-    color: #235BBE;
-    margin-left:15px;
-    }   
+        color: #235BBE;
+        margin-left:15px;
+}   
+
 #content2 .infosign2 a:hover{
-    color: #1b2893
-    }
-
-        
-
+        color: #1b2893
+}
+       
 .controls .case{
-    height: 14px;
-    width: 22px;
-    } 
+        height: 14px;
+        width: 22px;
+} 
+
 .controls .case-label {
-    color: #3A3A3A;
-    font: 14px Arial,sans-serif;
-    margin-left: -49px;
+        color: #3A3A3A;
+        font: 14px Arial,sans-serif;
+        margin-left: -49px;
 }    
    
 /*forms*/
 
 #frm_signin span a{margin-left:43px;}
 
-#signin_username, #signin_password{border: 1px solid #DCDCDC;
-    color: #828080;
-    display: block;
-    font: 13px arial;
-    height: 34px;
-    margin-bottom: 20px;
-    padding: 0 5px;
-    position: relative;
-    width: 250px;
-    z-index: 2;}
+#signin_username, #signin_password{
+        border: 1px solid #DCDCDC;
+        color: #828080;
+        display: block;
+        font: 13px arial;
+        height: 34px;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        position: relative;
+        width: 250px;
+        z-index: 2;
+}
 
 .main #frm_signin span {float: right;width: 205px;position: relative;top: -58px; right: 70px;color: #A3A1A1;font: 12px arial;line-height: 36px;text-align: left; text-transform: lowercase}
 
@@ -315,48 +331,50 @@ textarea{height: auto}
 #signin_remember{display:none}
 
 .button{
-    margin-top : 20px;
-    width: 260px;
+        margin-top : 20px;
+        width: 260px;
 }
 
 li.submit_row input, input[type=submit], a.btn{ width : 260px;background: #2F2F2F; border: 1px solid #090909; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); cursor: pointer; color : white; font:bold 14px arial; margin-bottom: 10px; text-transform: lowercase;}
 input[type=submit].authorize{
-    background: none repeat scroll 0 0 #34B02C ! important;
-    border: 1px solid #388530;
+        background: none repeat scroll 0 0 #34B02C ! important;
+        border: 1px solid #388530;
 }
 
 #btCancel{
-    margin-top: 87px;
+        margin-top: 87px;
 }
+
 #btsubmit, #btAuthorize{
-    text-decoration: none;
-    margin-left: auto;
-    margin-right: auto;
-    background: none repeat scroll 0 0 #34B02C;
-    border: 1px solid #388530;
-    color: white;
-    height: 34px;
-    padding: 0 5px;
-    width: 260px;
-    display: block;
-    line-height: 35px;
+        text-decoration: none;
+        margin-left: auto;
+        margin-right: auto;
+        background: none repeat scroll 0 0 #34B02C;
+        border: 1px solid #388530;
+        color: white;
+        height: 34px;
+        padding: 0 5px;
+        width: 260px;
+        display: block;
+        line-height: 35px;
 }
+
 #btsubmit:hover, #btAuthorize:hover{border:solid 1px #388530; background: #229716;}
 
 .appName{
-      display: block;
-    background: #white; 
-    border-top: 1px solid #ddd; 
-    color : white; 
-    font: bold 14px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
-    padding : 10px 0;
-    width: 290px;
-    margin-left: -21px; 
-    text-transform: lowercase;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    margin-top: 15px;
-    margin-bottom: 15px;
+        display: block;
+        background: #white; 
+        border-top: 1px solid #ddd; 
+        color : white; 
+        font: bold 14px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
+        padding : 10px 0;
+        width: 290px;
+        margin-left: -21px; 
+        text-transform: lowercase;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        margin-top: 15px;
+        margin-bottom: 15px;
 }
 
 
@@ -373,32 +391,32 @@ input[type=submit].authorize{
 
 
 .blocks p {
-	position:relative;
+	   position:relative;
 }
 
 .blocks label.error{
-	position:absolute;
-	z-index:1;
-	top:-11px;
-	left:-2px;
-	padding:5px 15px 9px 280px;
-	width:auto;
-	text-align:left;
-	line-height:26px;
-	margin:0;
-	background-color:#FFEEF0;
-	color:#666667;
+    	position:absolute;
+    	z-index:1;
+    	top:-11px;
+    	left:-2px;
+    	padding:5px 15px 9px 280px;
+    	width:auto;
+    	text-align:left;
+    	line-height:26px;
+    	margin:0;
+    	background-color:#FFEEF0;
+    	color:#666667;
 }
 
 .blocks label.ok {
-	position:absolute;
-	z-index:1;
-	top:-11px;
-	left:-1px;
-	padding:5px 15px 16px 229px;
-	margin:0;
-	color:#666667;
-	border: 1px solid #54cf4c;
+    	position:absolute;
+    	z-index:1;
+    	top:-11px;
+    	left:-1px;
+    	padding:5px 15px 16px 229px;
+    	margin:0;
+    	color:#666667;
+    	border: 1px solid #54cf4c;
 }
 
 .btn,

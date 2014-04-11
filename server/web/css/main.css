@@ -40,9 +40,9 @@ body {
 }
 
 .container-main {
-    width:765px;
-    float:left;
-    margin-top: 12px;
+        width:765px;
+        float:left;
+        margin-top: 12px;
 }
 
 .container-left {
@@ -56,10 +56,10 @@ body {
 }
 
 .container-right{
-    float: left;
-    height: inherit;
-    margin-top:27px;
-    width: 240px;
+        float: left;
+        height: inherit;
+        margin-top:27px;
+        width: 240px;
 }
 
 /*****************************************************************************************
@@ -145,27 +145,25 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
 
 
 #add-friend-panel{
-    height:110px;
-    width: 255px; 
-    background-color: #fff;
-    border: 1px solid #DCDCDC; 
-    margin-top:20px; 
-    display: none;}
+        height:110px;
+        width: 255px; 
+        background-color: #fff;
+        border: 1px solid #DCDCDC; 
+        margin-top:20px; 
+        display: none;}
 
 #add-friend-panel .add{
-    height:35px;
-    width: 90px; 
-    margin-left: 23px;
-    margin-top:15px;
-    padding: 4px;
+        height:35px;
+        width: 90px; 
+        margin-left: 23px;
+        margin-top:15px;
+        padding: 4px;
 }
 
 #add-friend-panel p{
-    font: normal 12px/1.4em Arial, sans-serif;
-    color:#909090;
-    margin-top: 10px;
-
-    
+        font: normal 12px/1.4em Arial, sans-serif;
+        color:#909090;
+        margin-top: 10px;
 }
 
 #user {
@@ -174,19 +172,18 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
         right : 0;
         padding : 0 7px;
         display : inline-block;
-     /*   border-bottom : 3px solid #9C96A7;*/
         background: #3C3C3C;                
         background-position: 65px 38px;        
 }
 
 #user a {
         color: #FFFFFF;
-    display: block;
-    font-family: "Oxygen-Regular";
-    font-size: 16px;
-    letter-spacing: 2px;
-    line-height: 50px;
-           text-decoration: none;
+        display: block;
+        font-family: "Oxygen-Regular";
+        font-size: 16px;
+        letter-spacing: 2px;
+        line-height: 50px;
+        text-decoration: none;
         text-transform: lowercase;
 }
 
@@ -207,19 +204,19 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
 }
 
 #user img {
-    border: 5px solid #626262;
-    float: left;
-    height: 40px;
-    margin-left: -7px;
-    margin-right: 10px;
-    width: 40px;
+        border: 5px solid #626262;
+        float: left;
+        height: 40px;
+        margin-left: -7px;
+        margin-right: 10px;
+        width: 40px;
 }
 
 p{
-   font: normal 15px/1.4em Arial, sans-serif;
-   color:#909090;
-   margin: auto;
-   margin-left: 20px;
+        font: normal 15px/1.4em Arial, sans-serif;
+        color:#909090;
+        margin: auto;
+        margin-left: 20px;
 }
 /* HELP DOCUMENTATION  ************************************************************/
 
@@ -293,7 +290,7 @@ p{
         background:#EEF2F6/*#FAFAFA*/;
         display: none;
         right: 0;
-    top:122px;
+        top:122px;
 }
         
 .help form p{
@@ -303,10 +300,10 @@ p{
         
 .help form textarea{ 
         border: 1px solid #DCDCDC;
-    color: #909090;
-    font: 12px arial;
-         margin-bottom:10px;
-    width:inherit;         
+        color: #909090;
+        font: 12px arial;
+        margin-bottom:10px;
+        width:inherit;         
 }
 
 .help #help-question h4{
@@ -315,16 +312,16 @@ p{
         
 .help #help-question .send-question{        
         background:#E93F44;
-    border: 1px solid #B53135;
-    color: #FFFFFF;
-    height: 24px;
-    width: 173px;
+        border: 1px solid #B53135;
+        color: #FFFFFF;
+        height: 24px;
+        width: 173px;
         padding-top:2px;
 }
 
 .help #help-question .send-question:hover{        
         background: #e6282e;
-    border: 1px solid #a12c2f;
+        border: 1px solid #a12c2f;
 }                        
 
         
