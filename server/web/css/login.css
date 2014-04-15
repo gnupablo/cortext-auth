@@ -4,7 +4,12 @@ css for the login page of cortext
 
 @font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
 
-#path .dashboard{padding-left:65px;}
+#path .dashboard{padding-left:65px;
+display: none;}
+
+
+#path .user{padding-left:60px;
+}
 
 
 #header .alert{
@@ -76,6 +81,15 @@ css for the login page of cortext
 
 .border-media{
         border:1px solid #E6E6E6;
+        padding-bottom: 35px;
+}
+
+.border-media a{
+        color: #909090;
+}
+
+.border-media a:hover{
+        color: #666667;
 }
 
 .media-user-info{
@@ -210,7 +224,7 @@ css for the login page of cortext
         width: 230px;
 }
 
-.controls .save-info, .controls .bt-register:hover{
+.controls .save-info:hover, .controls .bt-register:hover{
     background: #2F2F2F;
         border: 1px solid #090909;
         color: #fff;
@@ -221,8 +235,8 @@ css for the login page of cortext
 
 
 .controls .btn-danger {
-        background: #2CC31C;
-        border: 1px solid #1D8912;
+        background: #EE6E21;
+        border: 1px solid #CA5C1A;
         color: #FFFFFF;
         height: 34px;
         margin-right:16px;
@@ -233,7 +247,9 @@ css for the login page of cortext
         width: 230px;
 }
 
-.controls .save-info:hover, .controls .bt-sign:hover{
+
+
+.controls .bt-sign:hover{
         background: #F95F03;
         border: 1px solid #A03F04;
         color: #fff;
