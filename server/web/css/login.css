@@ -187,8 +187,8 @@ css for the login page of cortext
 }
 
 .controls .save-info, .controls .bt-sign{
-        background: #2CC31C;
-        border: 1px solid #1D8912;
+        background: #EE6E21;
+        border: 1px solid #CA5C1A;
         color: #FFFFFF;
         height: 34px;
         margin-right:16px;
@@ -197,6 +197,28 @@ css for the login page of cortext
         padding-top: 6px;
         width: 230px;
 }
+
+.controls .save-info, .controls .bt-register{    
+        background: #3C3C3C;
+        border: 1px solid #303030;
+        color: #FFFFFF;
+        height: 34px;
+        margin-right:16px;
+        margin-left: 153px;
+        margin-top: 10px;
+        padding-top: 6px;
+        width: 230px;
+}
+
+.controls .save-info, .controls .bt-register:hover{
+    background: #2F2F2F;
+        border: 1px solid #090909;
+        color: #fff;
+        transition: background-color 0.3s ease-in-out 0s;
+        
+}
+
+
 
 .controls .btn-danger {
         background: #2CC31C;
@@ -212,8 +234,8 @@ css for the login page of cortext
 }
 
 .controls .save-info:hover, .controls .bt-sign:hover{
-        background: #27AD19;
-        border: 1px solid #1D8912;
+        background: #F95F03;
+        border: 1px solid #A03F04;
         color: #fff;
         transition: background-color 0.3s ease-in-out 0s;
 }
@@ -274,36 +296,42 @@ css for the login page of cortext
 }
 
 #content2 .infosign{
-        color: #3A3A3A;
+        background: url("/images/user-icon.png") 280px 0px no-repeat;
         font: 14px Arial,sans-serif;
         margin-top:35px;
         margin-bottom: 35px;
+        color: #3A3A3A;
 }
 
 #content2 .infosign a{
-        color: #235BBE;
-        margin-left:15px;
+        color: #909090;
+        margin-left:33px;
+        font: 14px Arial,sans-serif;
+        text-decoration: none; 
 }
 
 #content2 .infosign a:hover{
-        color: #1b2893
+        color: #666667;
 }
 
    #content2 .infosign2{
-        color: #3A3A3A;
+        background: url("/images/power-icon.png") 280px -3px no-repeat;
         font: 14px Arial,sans-serif;
         margin-top:35px;
         margin-bottom: 35px;
         margin-left: 50px;
+        color: #3A3A3A;
+
 }
 
  #content2 .infosign2 a{
-        color: #235BBE;
-        margin-left:15px;
+        color: #909090;
+        margin-left:35px;
+        text-decoration: none;
 }   
 
 #content2 .infosign2 a:hover{
-        color: #1b2893
+        color: #666667;
 }
        
 .controls .case{
