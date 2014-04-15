@@ -312,7 +312,7 @@ display: none;}
 }
 
 #content2 .infosign{
-        background: url("/images/user-icon.png") 280px 0px no-repeat;
+        background: url("/images/user-icon.png") 170px 0px no-repeat;
         font: 14px Arial,sans-serif;
         margin-top:35px;
         margin-bottom: 35px;
@@ -321,17 +321,18 @@ display: none;}
 
 #content2 .infosign a{
         color: #909090;
-        margin-left:33px;
+        margin-left:38px;
         font: 14px Arial,sans-serif;
         text-decoration: none; 
 }
 
 #content2 .infosign a:hover{
         color: #666667;
+        text-decoration: underline;
 }
 
    #content2 .infosign2{
-        background: url("/images/power-icon.png") 280px -3px no-repeat;
+        background: url("/images/power-icon.png") 181px -3px no-repeat;
         font: 14px Arial,sans-serif;
         margin-top:35px;
         margin-bottom: 35px;
@@ -348,6 +349,7 @@ display: none;}
 
 #content2 .infosign2 a:hover{
         color: #666667;
+        text-decoration: underline;
 }
        
 .controls .case{
