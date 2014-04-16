@@ -148,6 +148,7 @@ display: none;}
 
 .profile .table-user{
         border: 1px solid #E6E6E6;
+        background-color: #E6E6E6;
         height: 40px;
         margin-bottom: 10px;
         margin-top: 15px;
@@ -187,7 +188,7 @@ display: none;}
         float: right;
         width: 30px;
         height: 40px; 
-        padding-left: 35px; 
+        padding-left: 30px; 
         margin-top:15px;
 }
 
@@ -387,7 +388,7 @@ display: none;}
 
 .main #frm_signin .name, .main #frm_signin .password {float:left;margin-left:110px;margin-top:8px;}	
 	
-input,textarea {border: 1px solid gainsboro;color: #BCBBBB;font: 13px arial;width: 220px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-top: 10px;border-radius: 3px; display: table-cell}
+input,textarea {border: 1px solid gainsboro;color: #909090;font: 13px arial;width: 220px;height: 34px;padding: 0 5px;display: block;margin-bottom: 5px;margin-top: 10px;border-radius: 3px; display: table-cell}
 :focus{ color: #6E6E6E !important; border : solid 1px #666768;}
 textarea{height: auto}
 #login_wrapper{margin: auto;font : normal 14px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;}
