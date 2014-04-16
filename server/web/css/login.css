@@ -81,10 +81,12 @@ display: none;}
 
 .border-media{
         border:1px solid #E6E6E6;
-        padding-bottom: 35px;
-        padding-top: 20px;
+        padding-bottom: 30px;
 }
-
+.border-media p{
+        padding-top: 10px;
+        color: #666667;
+}
 .border-media a{
         color: #909090;
 }
@@ -500,16 +502,26 @@ input[type=submit].authorize{
     width: 100px;
 }
 
-#log-out a {
+#log-out a, #log-out-img a{
     color: #909090;
     font: 14px Arial,sans-serif;
     text-decoration: none;
 }
 
-#log-out a:hover {
+#log-out a:hover, #log-out-img a:hover {
     color: #666667;
     font: 14px Arial,sans-serif;
     text-decoration: underline;
+}
+
+#log-out-img {
+    background: url("/images/power-bg.png") no-repeat  2px 0px;
+    height: 25px;
+    margin-top: 10px;
+    padding-left: 32px;
+    padding-top: 4px;
+    width: 140px;
+    margin-left: 10px;
 }
 
 
