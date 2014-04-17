@@ -4,25 +4,37 @@ css for the login page of cortext
 
 @font-face { font-family: "Oxygen-Regular"; src: url('/fonts/Oxygen-Regular.ttf'); }
 
-#path .dashboard{padding-left:65px;
-display: none;}
-
-
-#path .user{padding-left:60px;
+#path .dashboard{
+        padding-left:65px;
+        display: none;
 }
 
+#path .user{
+        padding-left:60px;
+}
 
 #content-auth .alert{
-    color: #9E1D43;
-    font: 16px "Oxygen-Regular",sans-serif;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    padding: 8px;
-    background-color:#E6E6E6;
-        
+        background: url("/images/robot-alert.png") 15px 10px no-repeat #E5EDFA;
+        color: #306BD8;
+        font: 16px "Oxygen-Regular",sans-serif;
+        margin-bottom: 15px;
+        margin-left: 270px;
+        margin-top: -8px;
+        padding: 8px;
+        text-align: center;
+        width: 735px;     
+}
+
+#content-auth .alert-error{
+        background: url("/images/robot-alert-error.png") 15px 10px no-repeat #f7d6e0;
+        color: #9E1D43;
+        font: 16px "Oxygen-Regular",sans-serif;
+        margin-top: -10px;
+        margin-bottom: 13px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding: 8px;
 }
 
 #user li{
@@ -41,11 +53,10 @@ display: none;}
 
 #user #login-out a{
         color:#909090;
-
 }
+
 #user #login-out a:hover{
         color:#626262;
-
 }
 
 #user #sign{
@@ -78,7 +89,9 @@ display: none;}
 
 /*user*/
 
-#content-auth{margin-top:65px;}
+#content-auth{
+        margin-top:65px;
+}
 
 .media{
         margin-left: 270px;
@@ -348,7 +361,6 @@ display: none;}
         margin-bottom: 35px;
         margin-left: 50px;
         color: #3A3A3A;
-
 }
 
  #content-auth .infosign2 a{
@@ -409,20 +421,21 @@ textarea{height: auto}
 }
 
 li.submit_row input, input[type=submit], a.btn{ 
-    width : 260px;
-    background: #3C3C3C;
-    border: 1px solid #303030;
-    border-radius: 3px; 
-    -moz-border-radius: 3px; 
-    -webkit-border-radius: 3px; 
-    box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); 
-    cursor: pointer; 
-    color : white; 
-    padding: 0 5px;
-    font:bold 14px arial; 
-    margin-bottom: 10px; 
-    margin-left: -5px;
-    text-transform: lowercase;}
+        width : 260px;
+        background: #3C3C3C;
+        border: 1px solid #303030;
+        border-radius: 3px; 
+        -moz-border-radius: 3px; 
+        -webkit-border-radius: 3px; 
+        box-shadow: 0px 0px 3px rgba(0,86,156, 0.6); 
+        cursor: pointer; 
+        color : white; 
+        padding: 0 5px;
+        font:bold 14px arial; 
+        margin-bottom: 10px; 
+        margin-left: -5px;
+        text-transform: lowercase;
+}
 
 input[type=submit].authorize{
         background: none repeat scroll 0 0 #34B02C ! important;
@@ -434,10 +447,10 @@ input[type=submit].authorize{
 }
 
 #btCancel:hover{
-    background: #2F2F2F;
-    border: 1px solid #090909;
-    color: #ffffff;
-    box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
+        background: #2F2F2F;
+        border: 1px solid #090909;
+        color: #ffffff;
+        box-shadow: 0px 0px 3px rgba(0,86,156, 0.6);
 }
 
 #btsubmit, #btAuthorize{
@@ -518,80 +531,79 @@ input[type=submit].authorize{
 .textarea,
 .blocks label.error,
 .blocks label.ok { 
-	border-radius:2px;
+	   border-radius:2px;
 }
 
 #log-out {
-    background: url("/images/power-bg.png") no-repeat  2px 0px;
-    height: 25px;
-    margin-top: 10px;
-    padding-left: 36px;
-    padding-top: 3px;
-    width: 100px;
+        background: url("/images/power-bg.png") no-repeat  2px 0px;
+        height: 25px;
+        margin-top: 10px;
+        padding-left: 36px;
+        padding-top: 3px;
+        width: 100px;
 }
 
 #log-out a, #log-out-img a{
-    color: #909090;
-    font: 14px Arial,sans-serif;
-    text-decoration: none;
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        text-decoration: none;
 }
 
 #log-out a:hover, #log-out-img a:hover {
-    color: #666667;
-    font: 14px Arial,sans-serif;
-    text-decoration: underline;
+        color: #666667;
+        font: 14px Arial,sans-serif;
+        text-decoration: underline;
 }
 
 #log-out-img {
-    background: url("/images/power-bg.png") no-repeat  2px 0px;
-    height: 25px;
-    margin-top: 10px;
-    padding-left: 32px;
-    padding-top: 4px;
-    width: 140px;
-    margin-left: 10px;
+        background: url("/images/power-bg.png") no-repeat  2px 0px;
+        height: 25px;
+        margin-top: 10px;
+        padding-left: 32px;
+        padding-top: 4px;
+        width: 140px;
+        margin-left: 10px;
 }
 
-
 #view {
-    background: url("/images/icon-view.png") no-repeat  2px 8px;
-    height: 20px;
-    padding-left: 36px;
-    padding-top: 3px;
-    width: 100px;
+        background: url("/images/icon-view.png") no-repeat  2px 8px;
+        height: 20px;
+        padding-left: 36px;
+        padding-top: 3px;
+        width: 100px;
 }
 
 #view a {
-    color: #909090;
-    font: 14px Arial,sans-serif;
-    text-decoration: none;
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        text-decoration: none;
 }
 
 #view a:hover {
-    color: #666667;
-    font: 14px Arial,sans-serif;
-    text-decoration: underline;
+        color: #666667;
+        font: 14px Arial,sans-serif;
+        text-decoration: underline;
 }
 
 #link-user {
-    height: 20px;
-    padding-left: 16px;
-    padding-top: 3px;
-    margin-top: 38px;
+        height: 20px;
+        padding-left: 16px;
+        padding-top: 3px;
+        margin-top: 38px;
 }
 
 #link-user a {
-    background: url("/images/user-icon-grey.png") no-repeat  2px 1px;
-    color: #909090;
-    font: 14px Arial,sans-serif;
-    text-decoration: none;
-    padding-left: 30px;
+        background: url("/images/user-icon-grey.png") no-repeat  2px 1px;
+        color: #909090;
+        font: 14px Arial,sans-serif;
+        text-decoration: none;
+        padding-left: 30px;
 }
 
 #link-user a:hover {
-    color: #666667;
-    font: 14px Arial,sans-serif;
-    text-decoration: underline;
+        color: #666667;
+        font: 14px Arial,sans-serif;
+        text-decoration: underline;
 }
 
 
@@ -599,6 +611,3 @@ input[type=submit].authorize{
 #authorize-container{width: 765px; margin: auto;height: 200px;}
 #authorize-container div{float:left; width: 250px; padding: 20px; border: 1px solid #eee; min-height: 100%; margin-left: 50px;margin-top:25px;}
 #no-idea p{margin-bottom: 23px;}
-
-
-
