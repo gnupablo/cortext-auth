@@ -9,7 +9,6 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <!--<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">-->
         <link rel="stylesheet" href="{{ app.request.basePath }}/css/reset.css">
         <link rel="stylesheet" href="{{ app.request.basePath }}/css/login.css">
         <link rel="stylesheet" href="{{ app.request.basePath }}/css/main.css">
@@ -60,10 +59,14 @@
             </div>
 
 
-            <div id="main">
+            <div id="content-auth">
+
+                <div class="media">
+
                 {% block content %}
                 {% endblock %}
-                </div>
+  </div><!--media-->
+ </div><!--content-auth-->
 
             <div id="footer">
                 <ul id="contact">
@@ -74,6 +77,9 @@
                     </li>
                 </ul>
             </div>
+
+
+       
 </div><!--content-->
      
        
