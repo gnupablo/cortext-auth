@@ -457,12 +457,12 @@ input[type=submit].authorize{
 
 .appName{
         display: block;
-        background: #white; 
+        background: #E6E6E6; 
         border-top: 1px solid #ddd; 
         color : white; 
         font: bold 14px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
         padding : 10px 0;
-        width: 290px;
+        width: 292px;
         margin-left: -21px; 
         text-transform: lowercase;
         text-align: center;
@@ -473,7 +473,7 @@ input[type=submit].authorize{
 
 
 /*footer*/
-#footer {padding-top : 40px; clear: both}
+#footer {padding-top : 100px; clear: both}
 #contact {text-align: center; font : normal 11px arial; color: #999;padding-top: 15px;border-top : 1px solid #eee; width: 600px; margin :auto; text-align: center; display: table}
 #contact a { display: table-cell; padding-left: 5px; font: normal 11px arial; color: #999; text-decoration: none}
 #contact a:hover { color: #444; text-decoration: none}
