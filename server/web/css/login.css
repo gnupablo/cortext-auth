@@ -14,7 +14,7 @@ css for the login page of cortext
 }
 
 #content-auth .alert{
-        background: url("/images/robot-alert.png") 15px 10px no-repeat #E5EDFA;
+        background: url("/images/robot-alert.png") 15px 9px no-repeat #E5EDFA;
         color: #306BD8;
         font: 16px "Oxygen-Regular",sans-serif;
         margin-bottom: 15px;
@@ -26,7 +26,7 @@ css for the login page of cortext
 }
 
 #content-auth .alert-error{
-        background: url("/images/robot-alert-error.png") 15px 10px no-repeat #f7d6e0;
+        background: url("/images/robot-alert-error.png") 15px 9px no-repeat #f7d6e0;
         color: #9E1D43;
         font: 16px "Oxygen-Regular",sans-serif;
         margin-top: -10px;
@@ -78,6 +78,15 @@ css for the login page of cortext
         padding-left: 4px;
         padding-right: 8px;
 }
+
+#user #user-path{
+        border-bottom: 3px solid #9C96A7;
+        margin-left: -4px;
+        margin-right: -7px;
+        padding-left: 8px;
+        padding-right: 8px;
+}
+
 
 #user #create-account{
         border-bottom: 3px solid #9C96A7;
@@ -421,7 +430,7 @@ textarea{height: auto}
 }
 
 li.submit_row input, input[type=submit], a.btn{ 
-        width : 260px;
+        width : 230px;
         background: #3C3C3C;
         border: 1px solid #303030;
         border-radius: 3px; 
@@ -443,7 +452,7 @@ input[type=submit].authorize{
 }
 
 #btCancel{
-        margin-top: 87px;
+        margin-top: 67px;
 }
 
 #btCancel:hover{
@@ -459,9 +468,9 @@ input[type=submit].authorize{
         background: #34B02C;
         border: 1px solid #388530;
         color: white;
-        height: 34px;
+        height: 36px;
         padding: 0 5px;
-        width: 260px;
+        width: 230px;
         display: block;
         line-height: 35px;
 }
@@ -475,7 +484,7 @@ input[type=submit].authorize{
         color : white; 
         font: bold 14px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
         padding : 10px 0;
-        width: 292px;
+        width: 262px;
         margin-left: -21px; 
         text-transform: lowercase;
         text-align: center;
@@ -609,5 +618,5 @@ input[type=submit].authorize{
 
 /*** authorize specifics ***/
 #authorize-container{width: 765px; margin: auto;height: 200px;}
-#authorize-container div{float:left; width: 250px; padding: 20px; border: 1px solid #eee; min-height: 100%; margin-left: 50px;margin-top:25px;}
+#authorize-container div{float:left; width: 220px; padding: 20px; border: 1px solid #eee; min-height: 100%; margin-left: 50px;margin-top:25px;}
 #no-idea p{margin-bottom: 23px;}
