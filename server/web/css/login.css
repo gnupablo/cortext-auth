@@ -259,7 +259,7 @@ css for the login page of cortext
 .controls .save-info:hover, .controls .bt-register:hover{
     background: #2F2F2F;
         border: 1px solid #090909;
-        color: #fff;
+        color: #FFFFFF !important;
         transition: background-color 0.3s ease-in-out 0s;
         
 }
