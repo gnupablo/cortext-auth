@@ -615,6 +615,18 @@ input[type=submit].authorize{
         text-decoration: underline;
 }
 
+#btn-link-manager{
+margin-top: 5px;
+width: 750px;
+background: #34B02C;
+    border: 1px solid #388530;
+    color: #FFFFFF;
+    height: 40px;
+}
+
+#btn-link-manager:hover{border:solid 1px #388530; background: #229716;}
+
+
 
 /*** authorize specifics ***/
 #authorize-container{width: 765px; margin: auto;height: 200px;}
