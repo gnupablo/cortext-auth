@@ -482,7 +482,7 @@ input[type=submit].authorize{
         background: #E6E6E6; 
         border-top: 1px solid #ddd; 
         color : white; 
-        font: bold 14px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
+        font: 17px/16px "Oxygen-Regular", arial, sans-serif; color : #4d4d4d;
         padding : 10px 0;
         width: 262px;
         margin-left: -21px; 
@@ -616,12 +616,12 @@ input[type=submit].authorize{
 }
 
 #btn-link-manager{
-margin-top: 5px;
-width: 750px;
-background: #34B02C;
-    border: 1px solid #388530;
-    color: #FFFFFF;
-    height: 40px;
+        margin-top: 5px;
+        width: 750px;
+        background: #34B02C;
+        border: 1px solid #388530;
+        color: #FFFFFF;
+        height: 40px;
 }
 
 #btn-link-manager:hover{border:solid 1px #388530; background: #229716;}
@@ -630,5 +630,24 @@ background: #34B02C;
 
 /*** authorize specifics ***/
 #authorize-container{width: 765px; margin: auto;height: 200px;}
-#authorize-container div{float:left; width: 220px; padding: 20px; border: 1px solid #eee; min-height: 100%; margin-left: 50px;margin-top:25px;}
+
+#authorize-container div{
+    float:left; 
+    width: 220px; 
+    padding: 20px; 
+    border: 1px solid #E8EAED; 
+    min-height: 100%; 
+    margin-left: 50px;
+    margin-top:60px;
+    background-color: #F6F7F8;
+}
+
+#authorize-container p{
+    color: #444444;
+    margin-right: 14px;
+    text-align: center;
+    font-size: 14px;
+}
+
+
 #no-idea p{margin-bottom: 23px;}
