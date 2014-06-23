@@ -16,5 +16,13 @@
     },
     "oauth": {
     "access_lifetime": 31536000
-  }
+    },
+    "mailer": {
+    'host'       => '',
+    'port'       => ,
+    'username'   => '',
+    'password'   => '',
+    'encryption' => 'ssl',
+    'auth_mode'  => 'login'
+    }
 }
