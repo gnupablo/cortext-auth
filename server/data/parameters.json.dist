@@ -8,21 +8,21 @@
   "resource_params": {},
   "curl_options": {},
   "db_options": {
-       "driver"    : "pdo_sqlite",
-       "dbname" : "ct_oauth.sqlite",
+       "driver"    : "",
+       "dbname" : "",
         "host" : "",
-        "username" : "",
+        "user" : "",
         "password" : ""
     },
     "oauth": {
     "access_lifetime": 31536000
     },
     "mailer": {
-    'host'       => '',
-    'port'       => ,
-    'username'   => '',
-    'password'   => '',
-    'encryption' => 'ssl',
-    'auth_mode'  => 'login'
+      "host"       : "",
+      "port"       : 0,
+      "username"   : "",
+      "password"   : "",
+      "encryption" : "",
+      "auth_mode"  : ""
     }
 }

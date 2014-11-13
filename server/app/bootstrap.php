@@ -87,7 +87,7 @@ $app['swiftmailer.options'] = $app['parameters']['mailer'];
 // SimpleUser service provider.
 $app->register($u = new SimpleUser\UserServiceProvider());
 
- $db = new PDO( $app['parameters']['db_options']['dsn'],  $app['parameters']['db_options']['username'], $app['parameters']['db_options']['password']);
+ $db = new PDO( $app['parameters']['db_options']['dsn'],  $app['parameters']['db_options']['user'], $app['parameters']['db_options']['password']);
  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
  $app['db_oauth'] = $db;
 /** set up dependency injection container */
