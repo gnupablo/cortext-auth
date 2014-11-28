@@ -85,7 +85,7 @@ if($params['driver']=='pdo_sqlite'){
   try {
     $db = new PDO(
                   $params['dsn'],
-                  $params['username'],
+                  $params['user'],
                   $params['password']
                   );
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
