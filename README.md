@@ -10,7 +10,7 @@ Installation
 Before anything, be sure to have the following packages : 
 
 - apache 2.2+
-- php 5.4+ (or 5.3.2 if you don't need the standalone web server)
+- php 5.4+
 - php5-curl module
 - mySql storage : php5-mysql mysql-server mysql-client 
 - [Composer](http://getcomposer.org/) : this is the fastest way to get this app up and running.  
