@@ -24,5 +24,6 @@
       "password"   : "",
       "encryption" : "",
       "auth_mode"  : ""
-    }
+    },
+    "manager" : "http://managerv2.cortext.net"
 }
