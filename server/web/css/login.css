@@ -161,6 +161,22 @@ css for the login page of cortext
         font: 13px Arial,sans-serif;
 }
 
+.required-field:after {
+        content: "*";
+        font-weight: bold;
+        color: red;
+}
+
+.prc-complete {
+        font: 18px Arial, sans-serif;
+        color: #3A3A3A;
+        margin-top: 8px;
+}
+
+.missing {
+        border-color: peru;
+}
+
 #content-auth .user-information{
         background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
         margin-top: 25px;
@@ -331,6 +347,26 @@ css for the login page of cortext
 
 .control-group #inputPassword{
         margin-left: 60px;
+}
+
+.control-group #input-location {
+        margin-left: 68px;
+}
+
+.control-group #input-website {
+        margin-left: 70px;
+}
+
+.control-group #input-description {
+        margin-left: 50px;
+}
+
+.control-group #input-birthdate {
+        margin-left: 65px;
+}
+
+.control-group #input-last-connexion {
+        margin-left: 28px;
 }
 
 #content-auth .info-sign{
