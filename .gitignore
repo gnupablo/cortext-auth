@@ -19,3 +19,4 @@ web/bundles/*
 /server/config/config.php
 /server/data/*
 composer.lock
+/server/log/php.log
