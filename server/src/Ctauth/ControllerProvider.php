@@ -32,9 +32,24 @@ class ControllerProvider implements ControllerProviderInterface
 
         $controllers->get('/authorize', function (Application $app)
                 {
-                    $this->log('reveived authorize GET request', $app);
+                    $this->log('reveived authorize GET request'.json_encode($app['request']->request), $app);
                     $client_id = $app['request']->get('client_id');
                     $user = $app['user.manager']->getCurrentUser();
+
+                    //////////////////// to be implemented
+                    /// to avoid authorization form displayed inside cortext apps
+                    if($client_id == "cortext-dashboard"){
+                        $userHasAuthorizedThisAppAlready = true;
+                    }
+                    ////////////////////
+                    ///
+                    if($userHasAuthorizedThisAppAlready)                    
+                    {
+                        $authorized = true;
+                        $userId = $user->getId();
+                        return $app['oauth_server']->handleAuthorizeRequest($app['request'], $authorized, $userId);    
+                    }
+                    
                     // if(!$user) die('no user !');
                     if (!$app['oauth_server']->validateAuthorizeRequest($app['request']))
                     {
@@ -46,7 +61,7 @@ class ControllerProvider implements ControllerProviderInterface
         $controllers->post('/authorize', function (Application $app)
                 {
                     $userId = $app['user.manager']->getCurrentUser()->getId();
-                    $this->log('reveived authorize POST request for user : '.$userId , $app);
+                    $this->log('reveived authorize POST request for user : '.$userId .' request :'.json_encode($app['request']->request), $app);
                     $authorized = (bool) $app['request']->request->get('authorize');
 
                     return $app['oauth_server']->handleAuthorizeRequest($app['request'], $authorized, $userId);
