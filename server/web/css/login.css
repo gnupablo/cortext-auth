@@ -326,7 +326,27 @@ css for the login page of cortext
 }
 
 .control-group #input-email{
-        margin-left: 87px;
+        margin-left: 83px;
+}
+
+.control-group #input-city{
+        margin-left: 92px;
+}
+
+.control-group #input-country{
+        margin-left: 66px;
+}
+
+.control-group #input-institution{
+        margin-left: 55px;
+}
+
+.control-group #input-activitydomain{
+        margin-left: 24px;
+}
+
+.control-group #input-researchdomain{
+        margin-left: 8px;
 }
 
 .control-group #input-password{
@@ -347,10 +367,6 @@ css for the login page of cortext
 
 .control-group #inputPassword{
         margin-left: 60px;
-}
-
-.control-group #input-location {
-        margin-left: 68px;
 }
 
 .control-group #input-website {
