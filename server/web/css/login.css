@@ -173,10 +173,6 @@ css for the login page of cortext
         margin-top: 8px;
 }
 
-.missing {
-        border-color: peru;
-}
-
 #content-auth .user-information{
         background: url("/images/user.png") no-repeat scroll 725px 7px #EE6E21;
         margin-top: 25px;
@@ -297,7 +293,9 @@ css for the login page of cortext
         width: 230px;
 }
 
-
+.missing {
+        border-color: peru;
+}
 
 .controls .bt-sign:hover{
         background: #F95F03;
@@ -335,6 +333,20 @@ css for the login page of cortext
 
 .control-group #input-country{
         margin-left: 66px;
+        background-color: white;
+        border: 1px solid gainsboro;
+        color: #909090;
+        font: 13px Arial;
+        width: 235px;
+        height: 43px;
+        padding: 0 5px;
+        margin-bottom: 5px;
+        margin-top: 10px;
+        border-radius: 3px;
+}
+
+.control-group #input-country.missing {
+        border-color: peru;
 }
 
 .control-group #input-institution{
@@ -555,7 +567,6 @@ input[type=submit].authorize{
 #contact a:hover { color: #444; text-decoration: none}
 #contact li {margin: 0; height: 20px;}
 #contact li span{text-align: right; margin-right: 10px; display:table-cell;width: 300px;}
-
 
 /* ------pour validation formulaire dynamique-----------------------------------------------*/
 
