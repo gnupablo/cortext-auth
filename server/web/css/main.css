@@ -20,6 +20,7 @@ body {
         background-repeat:repeat-x;
         background-attachment:fixed;
         overflow-x:hidden; 
+        background-color: #f3f2ea;
 }
 
 #content {
@@ -81,13 +82,14 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
 
 #menu {        
         height:50px;
-        background-color: #EEF2F6;
-        border-bottom: 3px solid #9C9C9C;
+        background-color: #5c4283;
+        border-bottom: 3px solid #8162b0;
         position: relative;
 }
 
 #path { 
         overflow: hidden; 
+        background-color: #5c4283;
 }
 
 #path ul {
