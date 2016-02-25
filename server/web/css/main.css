@@ -88,7 +88,6 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
 
 #path { 
         overflow: hidden; 
-        background-color: #5c4283;
 }
 
 #path ul {
