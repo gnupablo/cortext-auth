@@ -252,6 +252,12 @@ css for the login page of cortext
         font: 14px Arial,sans-serif;
         margin-left: 25px; 
 }
+.controls .help-disclaimer {
+        font: 14px Arial,sans-serif;
+}
+.controls .help-disclaimer a {
+       margin-left: 0;
+}
 
 .controls .save-info, .controls .bt-sign{
         background: #EE6E21;
@@ -388,6 +394,11 @@ css for the login page of cortext
 
 .control-group #input-last-connexion {
         margin-left: 28px;
+}
+.control-group #input-disclaimer {
+       margin-left: 50px;
+       height: initial;
+       width: 18px;
 }
 
 #content-auth .info-sign{
