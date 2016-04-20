@@ -105,9 +105,6 @@ $app['oauth_server'] = function($app)
             return $server;
         };
 
-
-
-
 ////// mounting points
 // please see the Controller classes in src/Ctprofile/Controller and src/Ctprofile/Controller for more information
 $app['monolog']->info('Application parameters :'.print_r($app['parameters'], true));
@@ -127,9 +124,4 @@ $app->get('/', function() use($app)
             return $app->redirect('/user');
         })->bind('homepage');
         
-//Create admin user
-//$user = $app['user.manager']->createUser('webmaster@cortext.fr', 'c0rtext', 'Web Master', array('ROLE_ADMIN'));
-//$app['user.manager']->insert($user);
-
-
 return $app;
