@@ -105,6 +105,11 @@ css for the login page of cortext
 .media{
         margin-left: 270px;
         width: 750px;
+        min-height: 50px;
+}
+.media img {
+        float: left;
+        padding-right: 10px;
 }
 
 .border-media{

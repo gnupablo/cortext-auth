@@ -185,6 +185,7 @@ button.inactive { color : #DCDCDC !important; cursor: default !important; }
         line-height: 50px;
         text-decoration: none;
         text-transform: lowercase;
+        padding-right: 8px;
 }
 
 #user a:hover {
