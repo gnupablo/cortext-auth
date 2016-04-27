@@ -15,7 +15,10 @@ $request = OAuth2\HttpFoundationBridge\Request::createFromGlobals();
 
 // Integration des Terms of use
 $app->get('/terms', function () use ($app) {
-    return $app['twig']->render('terms.twig', array('layout_template' => '@user/layout.twig'));
+    $imageUrl=null;
+    if ( $app['user'] )
+      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
+    return $app['twig']->render('terms.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
 })->bind('terms');
 
 //let's rock !

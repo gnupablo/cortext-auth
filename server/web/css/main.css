@@ -332,3 +332,17 @@ p{
         position : relative;
         padding-top : 50px;
 }
+
+/* Footer */
+
+.auth-footer {
+    margin-top: 20px;
+    background-color: #EEF2F6;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    border-top: 3px solid #9C9C9C;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
