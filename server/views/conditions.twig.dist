@@ -1,0 +1,22 @@
+{% extends layout_template  %}
+
+{% block title %}Conditions Générales d'Utilisation détaillées{% endblock %}
+
+{% block content %}
+  <div class="media border-media">
+    <div class="page-header">
+      <h2 class="info-sign">{{ block('title') }}</h2>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean volutpat magna a nisi laoreet, nec aliquet nulla dapibus. Suspendisse varius egestas fermentum. Curabitur a commodo eros. Ut porttitor varius consequat. Suspendisse vitae lobortis lectus. Etiam lacus metus, sollicitudin quis lacinia non, dapibus eu mauris. Nulla aliquet, ante quis luctus rhoncus, ante erat egestas risus, quis aliquam quam leo nec neque. Nulla at lectus leo. Nunc blandit, velit non bibendum lobortis, diam ex faucibus est, at suscipit risus diam sed dui. Nulla vestibulum lacinia massa ac porta.</p>
+
+      <p>Quisque sodales auctor lorem in pulvinar. Mauris vestibulum congue eros nec dignissim. Sed tincidunt tristique tincidunt. Cras non neque laoreet, auctor risus id, semper urna. Quisque gravida quam a augue venenatis, vitae maximus orci iaculis. Duis ut lobortis tellus, ut mattis dolor. Maecenas risus metus, imperdiet sed augue non, cursus accumsan dolor. Fusce et massa consectetur, finibus nisl vitae, lobortis justo.</p>
+
+      <p>Praesent quis sapien ultricies, faucibus metus nec, condimentum nisi. Ut finibus sapien justo, quis molestie neque tincidunt nec. Ut non neque sem. Aenean cursus nunc vitae lectus accumsan egestas. Sed et malesuada leo. Nulla laoreet vehicula felis, id porta diam mollis ut. Pellentesque mattis massa in sapien posuere, id posuere nisi suscipit. Vestibulum laoreet sem in purus finibus vestibulum. Mauris eu odio neque. Phasellus metus velit, tincidunt eget est eu, posuere efficitur purus. Vivamus dignissim erat a nisi tincidunt congue. Vivamus sed finibus urna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae fringilla odio, elementum hendrerit nisi. Pellentesque gravida bibendum purus sit amet auctor.</p>
+
+      <p>Nullam vel tincidunt orci. Sed id tortor eleifend, dapibus lorem ut, ornare massa. Donec mollis convallis velit a elementum. Phasellus quis nisi imperdiet, malesuada sem ut, pharetra elit. Quisque sit amet dui id elit ornare tincidunt. Vivamus fringilla tempus semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse placerat egestas erat vel malesuada. Mauris eget diam a nisi porta sodales. Integer vel varius nisi, non luctus leo. Fusce finibus purus faucibus augue rutrum porttitor. Fusce efficitur, erat eget volutpat dapibus, leo elit maximus purus, nec egestas lacus ligula commodo arcu. Etiam eu eleifend tellus. Mauris blandit lectus et cursus mollis. Integer maximus fermentum vehicula. Pellentesque pulvinar diam ullamcorper neque tempus, sed viverra eros vulputate.</p>
+
+      <p>In congue turpis augue, vel volutpat purus ultricies a. Mauris elementum sem vel dolor sodales finibus. Etiam tincidunt sagittis orci, blandit tristique metus vehicula nec. Nullam et mauris in sapien pulvinar consectetur. Vivamus vel libero lacus. Morbi auctor purus ut dolor malesuada, nec lobortis libero aliquet. Pellentesque ligula eros, aliquet in metus et, laoreet malesuada orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean ultrices ex a justo dapibus ultricies. Nullam sit amet fermentum arcu. Phasellus sagittis commodo nisl quis consequat. Sed euismod enim ut nunc maximus sodales. Mauris velit mi, placerat eu euismod sit amet, sollicitudin at augue.</p>
+
+    </div>
+  </div> 
+{% endblock %}

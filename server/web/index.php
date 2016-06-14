@@ -13,13 +13,37 @@ $app = require_once dirname(__DIR__).'/app/bootstrap.php';
 // create an http foundation request implementing OAuth2_RequestInterface
 $request = OAuth2\HttpFoundationBridge\Request::createFromGlobals();
 
-// Integration des Terms of use
-$app->get('/terms', function () use ($app) {
+// Integration des CGU
+$app->get('/cgu', function () use ($app) {
     $imageUrl=null;
     if ( $app['user'] )
       $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
-    return $app['twig']->render('terms.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
-})->bind('terms');
+    return $app['twig']->render('cgu.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
+})->bind('cgu');
+
+// Integration des CGU détaillées
+$app->get('/conditions-generales-utilisation', function () use ($app) {
+    $imageUrl=null;
+    if ( $app['user'] )
+      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
+    return $app['twig']->render('conditions.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
+})->bind('conditions');
+
+// Integration des Crédits
+$app->get('/credits', function () use ($app) {
+    $imageUrl=null;
+    if ( $app['user'] )
+      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
+    return $app['twig']->render('credits.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
+})->bind('credits');
+
+// Integration des Mentions légales
+$app->get('/mentions-legales', function () use ($app) {
+    $imageUrl=null;
+    if ( $app['user'] )
+      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
+    return $app['twig']->render('mentions.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
+})->bind('mentions');
 
 //let's rock !
 $app->run($request);

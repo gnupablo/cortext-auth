@@ -345,4 +345,16 @@ p{
     border-top: 3px solid #9C9C9C;
     font-family: Arial, sans-serif;
     font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    color: #808080;
+}
+.auth-footer a {
+    text-decoration: none;
+    color: #808080;
+}
+.auth-footer img {
+    vertical-align: middle;
+    margin-left: 15px;
 }

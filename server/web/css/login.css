@@ -98,7 +98,9 @@ css for the login page of cortext
 /*user*/
 
 #content-auth{
-        margin-top:65px;
+        margin-top: 65px;
+	min-height: 350px;
+	padding-bottom: 50px;
 }
 
 .media{
