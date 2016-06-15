@@ -358,3 +358,23 @@ p{
     vertical-align: middle;
     margin-left: 15px;
 }
+
+/* Pages Légales *****************************************************/
+.legal h2 {
+    padding-top: 20px;
+    margin-left: 20px;
+    font: bold 1.2em Arial, sans-serif;
+}
+.legal table {
+    margin-left: 20px;
+    font: normal 14px Arial, sans-serif;
+    color: #808080;
+}
+.legal img {
+    padding: 5px;
+    margin-left: 20px;
+}
+.legal td {
+    border: Solid 1px grey;
+    padding: 6px;
+}
