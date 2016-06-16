@@ -360,21 +360,29 @@ p{
 }
 
 /* Pages Légales *****************************************************/
+.legal {
+    color: #808080;
+    font: normal 14px Arial, sans-serif;
+}
+.legal h2, .legal h3, .legal table, .legal img, .legal li, .legal p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
 .legal h2 {
     padding-top: 20px;
-    margin-left: 20px;
     font: bold 1.2em Arial, sans-serif;
 }
-.legal table {
-    margin-left: 20px;
-    font: normal 14px Arial, sans-serif;
-    color: #808080;
+.legal h3 {
+    padding-top: 15px;
+    font: bold 1.1em Arial, sans-serif;
 }
 .legal img {
     padding: 5px;
-    margin-left: 20px;
 }
 .legal td {
     border: Solid 1px grey;
     padding: 6px;
+}
+.legal li {
+    margin-left: 40px;
 }
