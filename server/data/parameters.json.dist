@@ -27,5 +27,6 @@
     },
     "manager" : "http://managerv2.cortext.net",
     "admin" : "webmaster@cortext.fr",
-    "adminList" : "coeur@cortext.fr"
+    "adminList" : "coeur@cortext.fr",
+    "platform_name" : "Cortext Manager"
 }
