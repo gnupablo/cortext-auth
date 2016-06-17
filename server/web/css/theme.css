@@ -1,1 +1,27 @@
 /* Theme Styles */
+
+body {
+    background-color: #f3f2ea;
+}
+#path, #menu {
+    background-color: #5c4283;
+}
+#path .user {
+    padding-left:126px;
+}
+#path ul li.home {
+    width: 126px;
+}
+
+#user #login-out {
+    background: url("/images/power-white.png") 30px 30px no-repeat #5c4283;
+}
+#user #login-out a {
+    color: inherit;
+}
+#menu, #user #user-name, #user #user-path, #user #create-account, #user #login-out {
+    border-bottom: 3px solid #8162b0;
+}
+.auth-footer {
+    display: none;
+}
