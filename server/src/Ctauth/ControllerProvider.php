@@ -38,6 +38,7 @@ class ControllerProvider implements ControllerProviderInterface
 
                     //////////////////// to be implemented
                     /// to avoid authorization form displayed inside cortext apps
+                    $userHasAuthorizedThisAppAlready = false;
                     if($client_id == "cortext-dashboard"){
                         $userHasAuthorizedThisAppAlready = true;
                     }
