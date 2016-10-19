@@ -13,14 +13,6 @@ $app = require_once dirname(__DIR__).'/app/bootstrap.php';
 // create an http foundation request implementing OAuth2_RequestInterface
 $request = OAuth2\HttpFoundationBridge\Request::createFromGlobals();
 
-// Integration des CGU
-$app->get('/cgu', function () use ($app) {
-    $imageUrl=null;
-    if ( $app['user'] )
-      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
-    return $app['twig']->render('cgu.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
-})->bind('cgu');
-
 // Integration des CGU détaillées
 $app->get('/conditions-generales-utilisation', function () use ($app) {
     $imageUrl=null;
