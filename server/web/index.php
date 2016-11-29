@@ -15,10 +15,7 @@ $request = OAuth2\HttpFoundationBridge\Request::createFromGlobals();
 
 // Integration des CGU détaillées
 $app->get('/conditions-generales-utilisation', function () use ($app) {
-    $imageUrl=null;
-    if ( $app['user'] )
-      $imageUrl=$app['user.controller']->getGravatarUrl($app['user']->getEmail());
-    return $app['twig']->render('conditions.twig', array('layout_template' => '@user/layout.twig', 'imageUrl' => $imageUrl));
+    return $app->redirect('http://risis.eu/risis-code-of-conduct/');
 })->bind('conditions');
 
 // Integration des Crédits
