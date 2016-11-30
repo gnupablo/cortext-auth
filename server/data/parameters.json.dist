@@ -25,6 +25,7 @@
       "encryption" : "",
       "auth_mode"  : ""
     },
+    "reminder" : true,
     "manager" : "http://managerv2.cortext.net",
     "admin" : "webmaster@cortext.fr",
     "adminList" : "coeur@cortext.fr",
