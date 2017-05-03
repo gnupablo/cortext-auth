@@ -105,6 +105,11 @@ $app['oauth_server'] = function($app)
             return $server;
         };
 
+//error global handling (json instead of html)
+$app->error(function (\Exception $e, $code) use($app) {
+    return $app->json(array("error" => $e->getMessage()),$code);
+});
+
 ////// mounting points
 // please see the Controller classes in src/Ctprofile/Controller and src/Ctprofile/Controller for more information
 $app['monolog']->info('Application parameters :'.print_r($app['parameters'], true));
