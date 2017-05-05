@@ -35,15 +35,10 @@ class ControllerProvider implements ControllerProviderInterface
                     $this->log('reveived authorize GET request'.json_encode($app['request']->request), $app);
                     $client_id = $app['request']->get('client_id');
                     $user = $app['user.manager']->getCurrentUser();
-
-                    //////////////////// to be implemented
-                    /// to avoid authorization form displayed inside cortext apps
-                    $userHasAuthorizedThisAppAlready = false;
-                    if($client_id == "cortext-dashboard"){
-                        $userHasAuthorizedThisAppAlready = true;
-                    }
-                    ////////////////////
-                    ///
+                    //get the user authorization for current client
+                    $authArray = json_decode($user->getAuthorization("oauth_clients"), true);
+                    $userHasAuthorizedThisAppAlready = isset($authArray[$client_id]);
+                    
                     if($userHasAuthorizedThisAppAlready)                    
                     {
                         $authorized = true;
@@ -61,9 +56,21 @@ class ControllerProvider implements ControllerProviderInterface
 
         $controllers->post('/authorize', function (Application $app)
                 {
-                    $userId = $app['user.manager']->getCurrentUser()->getId();
-                    $this->log('reveived authorize POST request for user : '.$userId .' request :'.json_encode($app['request']->request), $app);
+                    //get current user and id
+                    $user = $app['user.manager']->getCurrentUser();
+                    $userId = $user->getId();
+                    //get client id from request                                        
+                    $client_id = $app['request']->get('client_id');
+                    $this->log('reveived authorize POST request for user : '.$userId .' request :'.json_encode($app['request']->request), $app);                    
+                    //set authorization for the client based on form data
                     $authorized = (bool) $app['request']->request->get('authorize');
+                    $authArray = json_decode($user->getAuthorization("oauth_clients"), true);
+                    if($client_id)
+                    {
+                        $authArray[$client_id] = $authorized;
+                        $user->setAuthorization("oauth_clients",json_encode($authArray));
+                        $app['user.manager']->update($user);
+                    }
 
                     return $app['oauth_server']->handleAuthorizeRequest($app['request'], $authorized, $userId);
                 })->bind('authorize_post');
