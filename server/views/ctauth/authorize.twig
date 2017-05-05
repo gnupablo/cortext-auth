@@ -7,7 +7,7 @@
             I am here because I try to authenticate to application 
         </p>
         <p class="appName">{{ client_id }}</p>
-        <p>and I accept to share my private data inside cortext network to this application.
+        <p>and I accept to share my private data inside Risis network to this application.
         </p>
         <form action="{{ path('authorize_post') ~ '?' ~ app.request.queryString }}" method="post">
             <input type="submit" class="button" id="btAuthorize" value="authorize" />
